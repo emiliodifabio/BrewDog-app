@@ -63,7 +63,7 @@ sortByDescriptionLenght();
 
 const sortById = () => {
   const data = punkapi.map((n) => n).sort((a, b) => a.id - b.id);
-  console.log(data);
-  console.log(data[87]);
+  // console.log(data);
+  // console.log(data[87]);
 };
 sortById();
