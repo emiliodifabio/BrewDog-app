@@ -769,6 +769,10 @@ body {
   background-color: #f29f05;
   transition: all 0.3s;
 }
+.search-results .results .preview:focus {
+  background-color: #f29f05;
+  transition: all 0.3s;
+}
 
 @media (max-width: 768px) {
   .search-results .results {

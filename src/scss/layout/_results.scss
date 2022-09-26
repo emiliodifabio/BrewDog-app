@@ -35,6 +35,11 @@
     .preview:hover {
       background-color: variables.$primary-color;
       transition: all 0.3s;
+    
+    }
+    .preview:focus {
+      background-color: variables.$primary-color;
+      transition: all 0.3s;
     }
   }
 }
