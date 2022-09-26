@@ -367,11 +367,32 @@
   .beer {
     .beer-info {
       .beer-info__name {
-      padding: 5px 20px;
+        padding: 5px 20px;
       }
 
       .beer-info__brewed {
         padding: 10px 20px;
+      }
+    }
+
+    .cards-w {
+      .cards__description {
+        height: auto;
+      }
+      .cards__ingredients {
+        height: auto;
+      }
+      .cards__basics {
+        height: auto;
+      }
+      .cards__method {
+        height: auto;
+      }
+      .cards__food {
+        height: auto;
+      }
+      .cards__tip {
+        height: auto;
       }
     }
   }

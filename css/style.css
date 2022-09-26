@@ -650,6 +650,24 @@ form .search__btn .search__icon {
   .beer .beer-info .beer-info__brewed {
     padding: 10px 20px;
   }
+  .beer .cards-w .cards__description {
+    height: auto;
+  }
+  .beer .cards-w .cards__ingredients {
+    height: auto;
+  }
+  .beer .cards-w .cards__basics {
+    height: auto;
+  }
+  .beer .cards-w .cards__method {
+    height: auto;
+  }
+  .beer .cards-w .cards__food {
+    height: auto;
+  }
+  .beer .cards-w .cards__tip {
+    height: auto;
+  }
 }
 body {
   background-color: #2c2a2b;
