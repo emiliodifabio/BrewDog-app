@@ -132,6 +132,9 @@ p {
   h1 {
     font-size: 1.8em;
   }
+  h2 {
+    font-size: 1.4em;
+  }
 }
 button {
   cursor: pointer;
@@ -642,7 +645,7 @@ form .search__btn .search__icon {
 }
 @media (max-width: 500px) {
   .beer .beer-info .beer-info__name {
-    padding: 3px 20px;
+    padding: 5px 20px;
   }
   .beer .beer-info .beer-info__brewed {
     padding: 10px 20px;
