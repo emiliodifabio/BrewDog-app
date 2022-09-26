@@ -1,0 +1,31 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+body {
+  font-family: variables.$ff;
+  color: variables.$dark-color;
+}
+
+h1 {
+  font-size: variables.$h1-size;
+}
+
+h2 {
+  font-size: variables.$h2-size;
+}
+
+h3 {
+  font-size: variables.$h3-size;
+}
+
+h4 {
+  font-size: variables.$h4-size;
+}
+
+h5 {
+  font-size: variables.$h5-size;
+}
+
+p {
+  font-size: variables.$p-size;
+}

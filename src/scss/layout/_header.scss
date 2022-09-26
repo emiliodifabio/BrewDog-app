@@ -1,0 +1,18 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: variables.$light-color;
+  background-color: variables.$header-bg-color;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: variables.$border-radius-header;
+  box-shadow: variables.$box-shadow;
+  font-family: variables.$ff;
+  z-index: 1;
+}

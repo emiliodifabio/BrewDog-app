@@ -1,0 +1,729 @@
+body, html {
+  font-size: 16px;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #2c2a2b;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 0.9375em;
+}
+
+p {
+  font-size: 0.75em;
+}
+
+button {
+  cursor: pointer;
+}
+
+form .search__btn {
+  display: block;
+  position: relative;
+  width: 50px !important;
+  height: 50px !important;
+  border: none;
+  border-radius: 50px;
+  background-color: #bf4904;
+}
+form .search__btn .search__icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+}
+
+.pagination {
+  margin-top: auto;
+  padding: 40px;
+}
+.pagination .btn--inline {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #2c2a2b;
+  color: #f28705;
+  transition: all 0.2s;
+}
+.pagination .pagination__btn--next {
+  float: right;
+}
+.pagination .pagination__btn--prev {
+  float: left;
+}
+
+.header .header__logo {
+  width: 50px;
+  height: auto;
+  border-radius: 50px;
+}
+
+.header .search {
+  display: flex;
+  width: 40%;
+  height: auto;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #f28705;
+  border-radius: 50px;
+}
+.header .search input:focus {
+  color: #fff;
+  outline: none !important;
+}
+.header .search input::placeholder {
+  color: #fff;
+  opacity: 50%;
+}
+.header .search__field {
+  width: 85%;
+  height: auto;
+  border: none;
+  background-color: #f28705;
+  border-radius: 50px;
+  padding: 0 50px;
+}
+
+@media (max-width: 1200px) {
+  .header .search {
+    width: 50%;
+  }
+  .header .search input::placeholder {
+    width: 100%;
+  }
+  .header .search__field {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .header .search {
+    width: 60%;
+  }
+  .header .search__field {
+    width: 85%;
+  }
+}
+.beer {
+  width: 90%;
+  height: auto;
+  margin: 20px auto 0;
+}
+.beer .beer-info .beer-info__name {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: #f29f05;
+  color: #2c2a2b;
+  height: 50px;
+  font-weight: 800;
+  z-index: 0;
+}
+.beer .beer-info .beer-info__brewed {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: #f29f05;
+  color: #2c2a2b;
+  height: 50px;
+  padding: 5px 20px;
+  z-index: -1;
+}
+.beer .beer-info .beer-info-flex {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: #f29f05;
+  color: #2c2a2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  z-index: -2;
+}
+.beer .beer-info .beer-info-flex .beer-info__tagline {
+  font-weight: 400;
+  font-style: italic;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w .beer-info--abv-w {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w .beer-info--abv-w .beer-info--abv-val {
+  font-weight: 400;
+  padding: 0 5px;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w .beer-info--ibu-w {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w .beer-info--ibu-w .beer-info--ibu-val {
+  font-weight: 400;
+  padding: 0 5px;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w .beer-info--og-w {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px;
+}
+.beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w .beer-info--og-w .beer-info--og-val {
+  font-weight: 400;
+  padding: 0 5px;
+}
+.beer .cards-w {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-areas: "description ingredients image" "basics ingredients image" "method food tip";
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  place-content: center;
+  place-items: center;
+  gap: 15px;
+}
+.beer .cards-w .cards__description {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  grid-area: description;
+}
+.beer .cards-w .cards__description .cards__description--title {
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2c2a2b;
+}
+.beer .cards-w .cards__description .cards__description--text {
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+.beer .cards-w .cards__basics > div {
+  display: inline-flex;
+  position: relative;
+  margin: 0 10px;
+}
+.beer .cards-w .cards__basics {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  grid-area: basics;
+  text-align: center;
+}
+.beer .cards-w .cards__basics .cards__basics--title {
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2c2a2b;
+}
+.beer .cards-w .cards__basics .cards__basics--unit-details-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__basics .cards__basics--unit-details-w .cards__basics--unit-details {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 0;
+}
+.beer .cards-w .cards__basics .cards__basics--unit-EU-w {
+  flex-direction: column;
+}
+.beer .cards-w .cards__basics .cards__basics--unit-EU-w .cards__basics--unit-EU {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__basics .cards__basics--unit-US-w {
+  flex-direction: column;
+}
+.beer .cards-w .cards__basics .cards__basics--unit-US-w .cards__basics--unit-US {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__method > div {
+  display: inline-flex;
+  position: relative;
+  margin: 0 10px;
+}
+.beer .cards-w .cards__method {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 125px;
+  text-align: center;
+  grid-area: method;
+}
+.beer .cards-w .cards__method .cards__method--title {
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2c2a2b;
+}
+.beer .cards-w .cards__method .cards__method--details-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__method .cards__method--details-w .cards__method--details {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 0;
+}
+.beer .cards-w .cards__method .cards__method--unit-EU-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__method .cards__method--unit-EU-w .cards__method--unit-EU {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__method .cards__method--unit-US-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__method .cards__method--unit-US-w .cards__method--unit-US {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients > div {
+  display: inline-flex;
+  position: relative;
+  margin: 0 10px;
+}
+.beer .cards-w .cards__ingredients {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 615px;
+  grid-area: ingredients;
+  text-align: center;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--title {
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2c2a2b;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-details-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-details-w .cards__ingredients--malt-details {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-unit-EU-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-unit-EU-w .cards__ingredients--malt-unit-EU {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-unit-US-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--malt-unit-US-w .cards__ingredients--malt-unit-US {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-details-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+  transform: translateY(22px);
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-details-w .cards__ingredients--hops-details {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-unit-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-unit-w .cards__ingredients--hops-unit-t {
+  padding: 3px 0;
+  font-weight: 600;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-unit-w .cards__ingredients--hops-unit {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-add-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-add-w .cards__ingredients--hops-add-t {
+  padding: 3px 0;
+  font-weight: 600;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-add-w .cards__ingredients--hops-add {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-attribute-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-attribute-w .cards__ingredients--hops-attribute-t {
+  padding: 3px 0;
+  font-weight: 600;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--hops-attribute-w .cards__ingredients--hops-attribute {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--yeast-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--yeast-details-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.beer .cards-w .cards__ingredients .cards__ingredients--yeast-details-w .cards__ingredients--yeast-details {
+  padding: 3px 0;
+}
+.beer .cards-w .cards__food > div {
+  display: inline-flex;
+  position: relative;
+  margin: 0 10px;
+}
+.beer .cards-w .cards__food {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 125px;
+  grid-area: food;
+}
+.beer .cards-w .cards__food .cards__food--title {
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2c2a2b;
+}
+.beer .cards-w .cards__food .cards__food--text {
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+.beer .cards-w .cards__image {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 615px;
+  padding: 5px;
+  text-align: center;
+  grid-area: image;
+}
+.beer .cards-w .cards__image .cards__image--img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.beer .cards-w .cards__tip > div {
+  display: inline-flex;
+  position: relative;
+  margin: 0 10px;
+}
+.beer .cards-w .cards__tip {
+  background-color: #f29f05;
+  border-radius: 50px;
+  width: 300px;
+  height: 125px;
+  grid-area: tip;
+}
+.beer .cards-w .cards__tip .cards__tip--title {
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2c2a2b;
+}
+.beer .cards-w .cards__tip .cards__tip--text {
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+  .beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w {
+    display: none;
+  }
+  .beer .cards-w {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-areas: "description image" "basics image" "method ingredients" "tip ingredients" "food ingredients";
+  }
+}
+@media (max-width: 960px) {
+  .beer .cards-w {
+    grid-template-columns: 300px;
+    grid-template-areas: "image" "description" "ingredients" "basics" "method" "food" "tip";
+  }
+}
+@media (max-width: 768px) {
+  .beer .beer-info {
+    text-align: center;
+  }
+  .beer .beer-info .beer-info-flex {
+    justify-content: center;
+  }
+}
+body {
+  background-color: #2c2a2b;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(265px, max-content) minmax(min-content, 90%);
+}
+.container .search-results {
+  grid-column: 1/2;
+}
+.container .beer {
+  grid-column: 2/3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-areas: "results" "cards";
+  }
+  .container .search-results {
+    grid-area: results;
+  }
+  .container .beer {
+    grid-area: beer;
+    grid-column: 1/1;
+    margin-top: -50px;
+  }
+}
+.footer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background-color: #bf4904;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+.footer a {
+  color: #fff;
+  font-weight: 600;
+  margin: 0 4px;
+}
+.footer a:hover {
+  color: #f29f05;
+  transition: all 0.3s;
+}
+.footer .logo_github {
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background-color: #f29f05;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+  z-index: 1;
+}
+
+.search-results {
+  display: block;
+  position: relative;
+  min-width: 265px;
+  height: fit-content;
+  top: -90px;
+  background-color: #f28705;
+  border-radius: 0 0 50px 0px;
+  z-index: 0;
+}
+.search-results .results {
+  margin: 100px 0 0 0;
+}
+.search-results .results .preview {
+  padding: 10px;
+}
+.search-results .results .preview .preview__link {
+  color: #2c2a2b;
+}
+.search-results .results .preview .preview__link .preview__data .preview__malt {
+  font-style: italic;
+}
+.search-results .results .selected {
+  background-color: #f29f05;
+}
+.search-results .results .preview:hover {
+  background-color: #f29f05;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .search-results .results {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

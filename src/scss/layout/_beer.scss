@@ -1,0 +1,364 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.beer {
+  @include mixins.beer-grid;
+
+  .beer-info {
+    .beer-info__name {
+      @include mixins.beer-info;
+      height: 50px;
+      font-weight: variables.$font-weigth-large;
+      z-index: 0;
+    }
+    .beer-info__brewed {
+      @include mixins.beer-info;
+      height: 50px;
+      padding: 5px 20px;
+      z-index: -1;
+    }
+
+    .beer-info-flex {
+      @include mixins.beer-info;
+      @include mixins.beer-info-flex;
+      height: 50px;
+      z-index: -2;
+
+      .beer-info__tagline {
+        font-weight: variables.$font-weigth-small;
+        font-style: italic;
+      }
+
+      .beer-info--abv-ibu-og-w {
+        @include mixins.beer-info--abv-ibu-og-w;
+
+        .beer-info--abv-w {
+          @include mixins.beer-info--abv-ibu-og;
+
+          .beer-info--abv-val {
+            @include mixins.beer-info--abv-ibu-val;
+          }
+        }
+        .beer-info--ibu-w {
+          @include mixins.beer-info--abv-ibu-og;
+
+          .beer-info--ibu-val {
+            @include mixins.beer-info--abv-ibu-val;
+          }
+        }
+        .beer-info--og-w {
+          @include mixins.beer-info--abv-ibu-og;
+
+          .beer-info--og-val {
+            @include mixins.beer-info--abv-ibu-val;
+          }
+        }
+      }
+    }
+  }
+
+  .cards-w {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-areas:
+      "description ingredients image"
+      "basics ingredients image"
+      "method food tip";
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    place-content: center;
+    place-items: center;
+    gap: 15px;
+
+    .cards__description {
+      @include mixins.cards-bg;
+      @include mixins.card-300x300;
+      grid-area: description;
+
+      .cards__description--title {
+        @include mixins.cards-title;
+      }
+      .cards__description--text {
+        @include mixins.cards-description;
+      }
+    }
+
+    .cards__basics > div {
+      @include mixins.cards-only-div;
+    }
+
+    .cards__basics {
+      @include mixins.cards-bg;
+      @include mixins.card-300x300;
+      grid-area: basics;
+
+      text-align: center;
+
+      .cards__basics--title {
+        @include mixins.cards-title;
+      }
+      .cards__basics--unit-details-w {
+        @include mixins.cards-details-w;
+
+        .cards__basics--unit-details {
+          @include mixins.cards-details;
+        }
+      }
+      .cards__basics--unit-EU-w {
+        @include mixins.cards-unit-w;
+
+        .cards__basics--unit-EU {
+          @include mixins.cards-unit;
+        }
+      }
+      .cards__basics--unit-US-w {
+        @include mixins.cards-unit-w;
+
+        .cards__basics--unit-US {
+          @include mixins.cards-unit;
+        }
+      }
+    }
+
+    .cards__method > div {
+      @include mixins.cards-only-div;
+    }
+
+    .cards__method {
+      @include mixins.cards-bg;
+      @include mixins.card-300x125;
+      text-align: center;
+      grid-area: method;
+
+      .cards__method--title {
+        @include mixins.cards-title;
+      }
+
+      .cards__method--details-w {
+        @include mixins.cards-details-w;
+
+        .cards__method--details {
+          @include mixins.cards-details;
+        }
+      }
+
+      .cards__method--unit-EU-w {
+        @include mixins.cards-details-w;
+
+        .cards__method--unit-EU {
+          @include mixins.cards-unit;
+        }
+      }
+
+      .cards__method--unit-US-w {
+        @include mixins.cards-details-w;
+
+        .cards__method--unit-US {
+          @include mixins.cards-unit;
+        }
+      }
+    }
+
+    .cards__ingredients > div {
+      @include mixins.cards-only-div;
+    }
+
+    .cards__ingredients {
+      @include mixins.cards-bg;
+      @include mixins.card-300x615;
+      grid-area: ingredients;
+
+      text-align: center;
+
+      .cards__ingredients--title {
+        @include mixins.cards-title;
+      }
+
+      .cards__ingredients--malt-title {
+        @include mixins.cards-ingredients-title;
+      }
+
+      .cards__ingredients--malt-details-w {
+        @include mixins.cards-details-w;
+
+        .cards__ingredients--malt-details {
+          @include mixins.cards-details;
+        }
+      }
+
+      .cards__ingredients--malt-unit-EU-w {
+        @include mixins.cards-details-w;
+        .cards__ingredients--malt-unit-EU {
+          @include mixins.cards-unit;
+        }
+      }
+
+      .cards__ingredients--malt-unit-US-w {
+        @include mixins.cards-details-w;
+        .cards__ingredients--malt-unit-US {
+          @include mixins.cards-unit;
+        }
+      }
+
+      .cards__ingredients--hops-title {
+        @include mixins.cards-ingredients-title;
+      }
+
+      .cards__ingredients--hops-details-w {
+        @include mixins.cards-details-w;
+        transform: translateY(22px);
+
+        .cards__ingredients--hops-details {
+          @include mixins.cards-details;
+        }
+      }
+
+      .cards__ingredients--hops-unit-w {
+        @include mixins.cards-details-w;
+
+        .cards__ingredients--hops-unit-t {
+          @include mixins.cards-unit;
+          font-weight: variables.$font-weigth-medium;
+        }
+
+        .cards__ingredients--hops-unit {
+          @include mixins.cards-unit;
+        }
+      }
+
+      .cards__ingredients--hops-add-w {
+        @include mixins.cards-details-w;
+
+        .cards__ingredients--hops-add-t {
+          @include mixins.cards-unit;
+          font-weight: variables.$font-weigth-medium;
+        }
+
+        .cards__ingredients--hops-add {
+          @include mixins.cards-unit;
+        }
+      }
+
+      .cards__ingredients--hops-attribute-w {
+        @include mixins.cards-details-w;
+
+        .cards__ingredients--hops-attribute-t {
+          @include mixins.cards-unit;
+          font-weight: variables.$font-weigth-medium;
+        }
+
+        .cards__ingredients--hops-attribute {
+          @include mixins.cards-unit;
+        }
+      }
+
+      .cards__ingredients--yeast-title {
+        @include mixins.cards-ingredients-title;
+      }
+
+      .cards__ingredients--yeast-details-w {
+        @include mixins.cards-details-w;
+        .cards__ingredients--yeast-details {
+          @include mixins.cards-unit;
+        }
+      }
+    }
+
+    .cards__food > div {
+      @include mixins.cards-only-div;
+    }
+    .cards__food {
+      @include mixins.cards-bg;
+      @include mixins.card-300x125;
+      grid-area: food;
+
+      .cards__food--title {
+        @include mixins.cards-title;
+      }
+
+      .cards__food--text {
+        @include mixins.cards-description;
+      }
+    }
+    .cards__image {
+      @include mixins.cards-bg;
+      @include mixins.card-300x615;
+      padding: 5px;
+      text-align: center;
+      grid-area: image;
+
+      .cards__image--img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .cards__tip > div {
+      @include mixins.cards-only-div;
+    }
+
+    .cards__tip {
+      @include mixins.cards-bg;
+      @include mixins.card-300x125;
+      grid-area: tip;
+
+      .cards__tip--title {
+        @include mixins.cards-title;
+      }
+
+      .cards__tip--text {
+        @include mixins.cards-description;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .beer {
+    .beer-info {
+      .beer-info-flex {
+        .beer-info--abv-ibu-og-w {
+          display: none;
+        }
+      }
+    }
+
+    .cards-w {
+      grid-template-columns: repeat(2, 300px);
+      grid-template-areas:
+        "description image"
+        "basics image"
+        "method ingredients"
+        "tip ingredients"
+        "food ingredients";
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .beer {
+    .cards-w {
+      grid-template-columns: 300px;
+      grid-template-areas:
+        "image"
+        "description"
+        "ingredients"
+        "basics"
+        "method"
+        "food"
+        "tip";
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .beer {
+    .beer-info {
+      text-align: center;
+      .beer-info-flex {
+        justify-content: center;
+      }
+    }
+  }
+}

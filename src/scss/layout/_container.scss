@@ -1,0 +1,34 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(265px, max-content) minmax(min-content, 90%);
+
+  .search-results {
+    grid-column: 1/2;
+  }
+
+  .beer {
+    grid-column: 2/3;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "results"
+      "cards";
+
+    .search-results {
+      grid-area: results;
+    }
+
+    .beer {
+      grid-area: beer;
+      grid-column: 1/1;
+      margin-top: -50px;
+    }
+  }
+}

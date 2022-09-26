@@ -1,0 +1,51 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+button {
+  cursor: pointer;
+}
+
+form {
+  .search__btn {
+    display: block;
+    position: relative;
+    width: 50px !important;
+    height: 50px !important;
+    border: variables.$reset-border;
+    border-radius: variables.$border-radius;
+    background-color: variables.$btn-search-color;
+
+    .search__icon {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 25px;
+      height: 25px;
+      fill: variables.$icon-color;
+    }
+  }
+}
+
+.pagination {
+  margin-top: auto;
+  padding: 40px;
+
+  .btn--inline {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border: variables.$reset-border;
+    border-radius: variables.$border-radius;
+    background-color: variables.$btn-pagination-color;
+    color: variables.$btn-text-color;
+    transition: all 0.2s;
+  }
+
+  .pagination__btn--next {
+    float: right;
+  }
+  
+  .pagination__btn--prev {
+    float: left;
+  }
+}

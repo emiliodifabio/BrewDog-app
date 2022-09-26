@@ -1,0 +1,121 @@
+@use "../abstract/variables";
+
+//reset
+@mixin reset-box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin reset-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+//beer
+@mixin beer-grid {
+  width: 90%;
+  height: auto;
+  margin: 20px auto 0;
+}
+
+@mixin beer-info {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$box-shadow;
+  background-color: variables.$primary-color;
+  color: variables.$dark-color;
+}
+
+@mixin beer-info-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin beer-info--abv-ibu-og-w {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+@mixin beer-info--abv-ibu-og {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px;
+}
+
+@mixin beer-info--abv-ibu-val {
+  font-weight: variables.$font-weigth-small;
+  padding: 0 5px;
+}
+
+//cards
+@mixin cards-bg {
+  background-color: variables.$primary-color;
+  border-radius: variables.$border-radius;
+}
+
+@mixin cards-title {
+  font-weight: variables.$font-weigth-large;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid variables.$dark-color;
+}
+
+@mixin cards-description {
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+
+@mixin cards-only-div {
+  display: inline-flex;
+  position: relative;
+  margin: 0 10px;
+}
+
+@mixin cards-details-w {
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+@mixin cards-details {
+  font-weight: variables.$font-weigth-medium;
+  text-transform: uppercase;
+  padding: 3px 0;
+}
+
+@mixin cards-unit-w {
+  flex-direction: column;
+}
+
+@mixin cards-unit {
+  padding: 3px 0;
+}
+
+@mixin cards-ingredients-title {
+  font-weight: variables.$font-weigth-large;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+@mixin card-300x300 {
+  width: 300px;
+  height: 300px;
+}
+@mixin card-300x615 {
+  width: 300px;
+  height: 615px;
+}
+@mixin card-300x125 {
+  width: 300px;
+  height: 125px;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "brewery-app",
+  "version": "1.0.0",
+  "description": "Brewery App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Emilio Di Fabio",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "punkapi-db": "^2.6.0"
+  }
+}

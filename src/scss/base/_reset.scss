@@ -1,0 +1,76 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+body {
+  @extend %font-size-default;
+  color: variables.$light-color;
+  @include mixins.reset-margin-padding;
+}
+
+html {
+  @extend %font-size-default;
+}
+
+* {
+  @include mixins.reset-box-sizing;
+}
+
+*:before {
+  @include mixins.reset-box-sizing;
+}
+
+*:after {
+  @include mixins.reset-box-sizing;
+}
+
+html {
+  @include mixins.reset-margin-padding;
+}
+
+h1 {
+  @include mixins.reset-margin-padding;
+}
+
+h2 {
+  @include mixins.reset-margin-padding;
+}
+
+h3 {
+  @include mixins.reset-margin-padding;
+}
+
+h4 {
+  @include mixins.reset-margin-padding;
+}
+
+h5 {
+  @include mixins.reset-margin-padding;
+}
+
+h6 {
+  @include mixins.reset-margin-padding;
+}
+
+p {
+  @include mixins.reset-margin-padding;
+}
+
+ol {
+  @include mixins.reset-margin-padding;
+}
+
+ul {
+  @include mixins.reset-margin-padding;
+}
+
+ol {
+  list-style-type: variables.$reset-list-style-type;
+}
+
+ul {
+  list-style-type: variables.$reset-list-style-type;
+}
+
+a {
+  text-decoration: variables.$text-decoration;
+}

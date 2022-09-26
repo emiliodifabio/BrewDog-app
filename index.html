@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bewery App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" defer src="src/js/controller.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="/src/img/logo_brewey_app.png" alt="logo" class="header__logo" />
+      <form class="search">
+        <input
+          type="text"
+          class="search__field"
+          placeholder="Search: name, year, abv, srm, ebc, food, ibu"
+        />
+        <button class="btn search__btn">
+          <svg class="search__icon">
+            <use href="/src/img/icons.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <main>
+      <div class="container">
+        <section class="search-results">
+          <ul class="results">
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Electric India</h5>
+                  <p class="preview__malt">Extra Pale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">10 Heads High</h5>
+                  <p class="preview__malt">Extra Pale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Sam Saint</h5>
+                  <p class="preview__malt">Extra Pale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">77 Lager</h5>
+                  <p class="preview__malt">Extra Pale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Baby Saison - B-Sides</h5>
+                  <p class="preview__malt">Pilsner</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Baltic Fleet</h5>
+                  <p class="preview__malt">Pale Ale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">
+                    Barrel Aged Albino Squid Assassin
+                  </h5>
+                  <p class="preview__malt">Pale Ale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview selected">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Bavarian Weizen</h5>
+                  <p class="preview__malt">Extra Pale</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Beatnik</h5>
+                  <p class="preview__malt">Maris Otter</p>
+                </div>
+              </a>
+            </li>
+            <li class="preview">
+              <a class="preview__link" href="#">
+                <div class="preview__data">
+                  <h5 class="preview__title">Belgian Trappist</h5>
+                  <p class="preview__malt">Extra Pale</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="pagination">
+            <button data-goto="2" class="btn--inline pagination__btn--next">
+              <p>Page 2 >></p>
+            </button>
+          </div>
+        </section>
+        <section class="beer">
+          <div class="beer-info">
+            <h1 class="beer-info__name">Bavarian Weizen</h1>
+            <h2 class="beer-info__brewed">First Brewed 09/2013</h2>
+            <div class="beer-info-flex">
+              <h3 class="beer-info__tagline">Unleash the last series.</h3>
+              <div class="beer-info--abv-ibu-og-w">
+                <div class="beer-info--abv-w">
+                  <h4 class="beer-info--abv">Abv:</h4>
+                  <h4 class="beer-info--abv-val">6.3%</h4>
+                </div>
+                <div class="beer-info--ibu-w">
+                  <h4 class="beer-info--ibu">Ibu:</h4>
+                  <h4 class="beer-info--ibu-val">55</h4>
+                </div>
+                <div class="beer-info--og-w">
+                  <h4 class="beer-info--og">Og:</h4>
+                  <h4 class="beer-info--og-val">1060</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards-w">
+            <div class="cards__description">
+              <h5 class="cards__description--title">The beer is...</h5>
+              <p class="cards__description--text">
+                Our Unleash the Yeast series was an epic experiment into the
+                differences in aroma and flavour provided by switching up your
+                yeast. We brewed up a wort with a light caramel note and some
+                toasty biscuit flavour, and hopped it with Amarillo and
+                Centennial for a citrusy bitterness. Everything else is down to
+                the yeast. Bavarian Weizen yeast adds traditional weissbier
+                notes of banana and clove.
+              </p>
+            </div>
+            <div class="cards__basics">
+              <h5 class="cards__basics--title">Basics</h5>
+              <div class="cards__basics--unit-details-w">
+                <p class="cards__basics--unit-details">Volume</p>
+                <p class="cards__basics--unit-details">Boil Volume</p>
+                <p class="cards__basics--unit-details">Target Fg</p>
+                <p class="cards__basics--unit-details">Target OG</p>
+                <p class="cards__basics--unit-details">Ebc</p>
+                <p class="cards__basics--unit-details">Srm</p>
+                <p class="cards__basics--unit-details">Ph</p>
+                <p class="cards__basics--unit-details">Attenuation Level</p>
+              </div>
+              <div class="cards__basics--unit-EU-w">
+                <p class="cards__basics--unit-EU">20l</p>
+                <p class="cards__basics--unit-EU">20l</p>
+              </div>
+              <div class="cards__basics--unit-US-w">
+                <p class="cards__basics--unit-US">5gal</p>
+                <p class="cards__basics--unit-US">6gal</p>
+                <p class="cards__basics--unit-US">1012</p>
+                <p class="cards__basics--unit-US">1060</p>
+                <p class="cards__basics--unit-US">30</p>
+                <p class="cards__basics--unit-US">15</p>
+                <p class="cards__basics--unit-US">4.4</p>
+                <p class="cards__basics--unit-US">80%</p>
+              </div>
+            </div>
+            <div class="cards__method">
+              <h5 class="cards__method--title">Method</h5>
+              <div class="cards__method--details-w">
+                <p class="cards__method--details">Mash Temp</p>
+                <p class="cards__method--details">Fermentation</p>
+              </div>
+              <div class="cards__method--unit-EU-w">
+                <p class="cards__method--unit-EU">65°C</p>
+                <p class="cards__method--unit-EU">22°C</p>
+              </div>
+              <div class="cards__method--unit-US-w">
+                <p class="cards__method--unit-US">149°F</p>
+                <p class="cards__method--unit-US">72°F</p>
+              </div>
+            </div>
+            <div class="cards__ingredients">
+              <h5 class="cards__ingredients--title">Ingredients</h5>
+              <h5 class="cards__ingredients--malt-title">Malt</h5>
+              <div class="cards__ingredients--malt-details-w">
+                <p class="cards__ingredients--malt-details">Extra Pale</p>
+                <p class="cards__ingredients--malt-details">Caramalt</p>
+                <p class="cards__ingredients--malt-details">Dark Crystal</p>
+                <p class="cards__ingredients--malt-details">Munich</p>
+              </div>
+              <div class="cards__ingredients--malt-unit-EU-w">
+                <p class="cards__ingredients--malt-unit-EU">4.58kg</p>
+                <p class="cards__ingredients--malt-unit-EU">0.25kg</p>
+                <p class="cards__ingredients--malt-unit-EU">0.06kg</p>
+                <p class="cards__ingredients--malt-unit-EU">0.25kg</p>
+              </div>
+              <div class="cards__ingredients--malt-unit-US-w">
+                <p class="cards__ingredients--malt-unit-US">10.08lb</p>
+                <p class="cards__ingredients--malt-unit-US">0.55lb</p>
+                <p class="cards__ingredients--malt-unit-US">0.14lb</p>
+                <p class="cards__ingredients--malt-unit-US">0.55lb</p>
+              </div>
+              <h5 class="cards__ingredients--hops-title">Hops</h5>
+              <div class="cards__ingredients--hops-details-w">
+                <p class="cards__ingredients--hops-details">Centennial</p>
+                <p class="cards__ingredients--hops-details">Amarillo</p>
+                <p class="cards__ingredients--hops-details">Centennial</p>
+                <p class="cards__ingredients--hops-details">Amarillo</p>
+                <p class="cards__ingredients--hops-details">Centennial</p>
+                <p class="cards__ingredients--hops-details">Amarillo</p>
+              </div>
+              <div class="cards__ingredients--hops-unit-w">
+                <p class="cards__ingredients--hops-unit-t">g</p>
+                <p class="cards__ingredients--hops-unit">5g</p>
+                <p class="cards__ingredients--hops-unit">10g</p>
+                <p class="cards__ingredients--hops-unit">10g</p>
+                <p class="cards__ingredients--hops-unit">17.5g</p>
+                <p class="cards__ingredients--hops-unit">17.5</p>
+                <p class="cards__ingredients--hops-unit">17.5</p>
+              </div>
+              <div class="cards__ingredients--hops-add-w">
+                <p class="cards__ingredients--hops-add-t">Add</p>
+                <p class="cards__ingredients--hops-add">Start</p>
+                <p class="cards__ingredients--hops-add">Start</p>
+                <p class="cards__ingredients--hops-add">Middle</p>
+                <p class="cards__ingredients--hops-add">Middle</p>
+                <p class="cards__ingredients--hops-add">End</p>
+                <p class="cards__ingredients--hops-add">End</p>
+              </div>
+              <div class="cards__ingredients--hops-attribute-w">
+                <p class="cards__ingredients--hops-attribute-t">Attribute</p>
+                <p class="cards__ingredients--hops-attribute">Bitter</p>
+                <p class="cards__ingredients--hops-attribute">Bitter</p>
+                <p class="cards__ingredients--hops-attribute">Flavour</p>
+                <p class="cards__ingredients--hops-attribute">Flavour</p>
+                <p class="cards__ingredients--hops-attribute">Flavour</p>
+                <p class="cards__ingredients--hops-attribute">Flavour</p>
+              </div>
+              <h5 class="cards__ingredients--yeast-title">Yeast</h5>
+              <div class="cards__ingredients--yeast-details-w">
+                <p class="cards__ingredients--yeast-details">
+                  WLP351 Bavarian Weizen
+                </p>
+              </div>
+            </div>
+            <div class="cards__food">
+              <h5 class="cards__food--title">Food pairing</h5>
+              <p class="cards__food--text">
+                Spicy paella; German bratwurst with spicy mustard dip and
+                vinaigrette salad; Creamy eggs benedict
+              </p>
+            </div>
+            <div class="cards__image">
+              <img
+                src="/src/img/88.png"
+                alt="Beer bottle"
+                class="cards__image--img"
+              />
+            </div>
+            <div class="cards__tip">
+              <h5 class="cards__tip--title">Tip</h5>
+              <p class="cards__tip--text">
+                Play around with the fermentation temperature to get the best
+                flavour profile from the individual yeasts.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      Created with
+      <a
+        href="https://github.com/sammdec/punkapi"
+        target="_blank"
+        rel="noopener noreferrer"
+        >PunkAPI</a
+      >
+      by Emilio Di Fabio
+      <a
+        href="https://github.com/emiliodifabio"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="logo_github"
+          src="/src/img/logo_github.png"
+          alt="Logo GitHub"
+      /></a>
+    </footer>
+  </body>
+</html>

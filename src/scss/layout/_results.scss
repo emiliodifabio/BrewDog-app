@@ -1,0 +1,48 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.search-results {
+  display: block;
+  position: relative;
+  min-width: 265px;
+  height: fit-content;
+  top: -90px;
+  background-color: variables.$results-bg-color;
+  border-radius: variables.$border-radius-results;
+  z-index: 0;
+
+  .results {
+    margin: 100px 0 0 0;
+
+    .preview {
+      padding: 10px;
+
+      .preview__link {
+        color: variables.$dark-color;
+
+        .preview__data {
+          .preview__malt {
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    .selected {
+      background-color: variables.$primary-color;
+    }
+
+    .preview:hover {
+      background-color: variables.$primary-color;
+      transition: all 0.3s;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-results {
+    .results {
+      text-align: center;
+    }
+  }
+}
