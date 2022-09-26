@@ -362,3 +362,17 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .beer {
+    .beer-info {
+      .beer-info__name {
+      padding: 3px 20px;
+      }
+
+      .beer-info__brewed {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

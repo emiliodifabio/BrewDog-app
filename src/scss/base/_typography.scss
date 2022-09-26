@@ -29,3 +29,26 @@ h5 {
 p {
   font-size: variables.$p-size;
 }
+
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: variables.$h1-size-500;
+  }
+  
+  h2 {
+    font-size: variables.$h2-size-500;
+  }
+  
+  h3 {
+    font-size: variables.$h3-size-500;
+  }
+  
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: variables.$h1-size-400;
+  }
+  
+}

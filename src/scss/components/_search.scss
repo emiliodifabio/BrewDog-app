@@ -4,7 +4,7 @@
 .header {
   .search {
     display: flex;
-    width: 40%;
+    width: 500px;
     height: auto;
     justify-content: space-between;
     text-align: center;
@@ -27,14 +27,14 @@
     border: variables.$reset-border;
     background-color: variables.$secondary-color;
     border-radius: 50px;
-    padding: 0 50px;
+    padding: 0 25px;
   }
 }
 
 @media (max-width: 1200px) {
   .header {
     .search {
-      width: 50%;
+      width: 400px;
 
       input::placeholder {
         width: 100%;
@@ -49,12 +49,19 @@
 @media (max-width: 768px) {
   .header {
     .search {
-      width: 60%;
-    }
-    .search__field {
-      width: 85%;
+      width: 300px;
     }
   }
 }
 
+@media (max-width: 500px) {
+  .header {
+    .search {
+      width: 250px;
+    }
 
+    .search__field {
+      padding: 0 14px;
+    }
+  }
+}
