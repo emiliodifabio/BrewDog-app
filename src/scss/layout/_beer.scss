@@ -93,8 +93,7 @@
       @include mixins.cards-bg;
       @include mixins.card-300x300;
       grid-area: basics;
-
-      text-align: center;
+      text-align: left;
 
       .cards__basics--title {
         @include mixins.cards-title;
@@ -137,7 +136,7 @@
       }
 
       .cards__method--details-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-method-w;
 
         .cards__method--details {
           @include mixins.cards-details;
@@ -145,7 +144,7 @@
       }
 
       .cards__method--unit-EU-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-method-w;
 
         .cards__method--unit-EU {
           @include mixins.cards-unit;
@@ -153,7 +152,7 @@
       }
 
       .cards__method--unit-US-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-method-w;
 
         .cards__method--unit-US {
           @include mixins.cards-unit;
@@ -181,7 +180,7 @@
       }
 
       .cards__ingredients--malt-details-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
 
         .cards__ingredients--malt-details {
           @include mixins.cards-details;
@@ -189,14 +188,14 @@
       }
 
       .cards__ingredients--malt-unit-EU-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
         .cards__ingredients--malt-unit-EU {
           @include mixins.cards-unit;
         }
       }
 
       .cards__ingredients--malt-unit-US-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
         .cards__ingredients--malt-unit-US {
           @include mixins.cards-unit;
         }
@@ -207,7 +206,7 @@
       }
 
       .cards__ingredients--hops-details-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
         transform: translateY(22px);
 
         .cards__ingredients--hops-details {
@@ -216,7 +215,7 @@
       }
 
       .cards__ingredients--hops-unit-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
 
         .cards__ingredients--hops-unit-t {
           @include mixins.cards-unit;
@@ -229,7 +228,7 @@
       }
 
       .cards__ingredients--hops-add-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
 
         .cards__ingredients--hops-add-t {
           @include mixins.cards-unit;
@@ -242,7 +241,7 @@
       }
 
       .cards__ingredients--hops-attribute-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
 
         .cards__ingredients--hops-attribute-t {
           @include mixins.cards-unit;
@@ -259,7 +258,7 @@
       }
 
       .cards__ingredients--yeast-details-w {
-        @include mixins.cards-details-w;
+        @include mixins.cards-details-ingredients-w;
         .cards__ingredients--yeast-details {
           @include mixins.cards-unit;
         }
@@ -279,7 +278,7 @@
       }
 
       .cards__food--text {
-        @include mixins.cards-description;
+        @include mixins.cards-description-tip-food;
       }
     }
     .cards__image {
@@ -308,7 +307,7 @@
       }
 
       .cards__tip--text {
-        @include mixins.cards-description;
+        @include mixins.cards-description-tip-food;
       }
     }
   }
@@ -332,6 +331,12 @@
         "method ingredients"
         "tip ingredients"
         "food ingredients";
+
+      .cards__method {
+        .cards__method--details-w {
+          @include mixins.cards-details-method-w-1200;
+        }
+      }
     }
   }
 }
@@ -367,11 +372,11 @@
   .beer {
     .beer-info {
       .beer-info__name {
-        padding: 5px 20px;
+        padding: 3px 20px;
       }
 
       .beer-info__brewed {
-        padding: 10px 20px;
+        padding: 8px 20px;
       }
     }
 
@@ -381,9 +386,21 @@
       }
       .cards__ingredients {
         height: auto;
+
+        .cards__ingredients--malt-title {
+          @include mixins.cards-ingredients-malt-title-500;
+        }
+
+        .cards__ingredients--yeast-details-w {
+          @include mixins.cards-details-ingredients-yeast-w-500;
+        }
       }
       .cards__basics {
         height: auto;
+
+        .cards__basics--unit-details-w {
+          @include mixins.cards-details-w-500;
+        }
       }
       .cards__method {
         height: auto;
