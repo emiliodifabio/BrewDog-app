@@ -13,6 +13,7 @@ const timeout = function (s) {
 const showRecipe = async function () {
   try {
     const res = await fetch("https://api.punkapi.com/v2/beers?ids=88");
+    // const res = await fetch("https://api.punkapi.com/v2/beers?search=pasta");
     const data = await res.json();
     if (!res.ok) throw new Error(`data.message`)(`$(res.status)`);
 
