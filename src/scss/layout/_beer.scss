@@ -6,6 +6,7 @@
 
   .message {
     @include mixins.beer-message;
+    z-index: 0;
   }
 
   .beer-info {
@@ -363,6 +364,8 @@
 
 @media (max-width: 768px) {
   .beer {
+    top: 70px;
+
     .message {
       @include mixins.beer-message-768;
     }

@@ -14,31 +14,57 @@
 
 //beer
 @mixin beer-grid {
+  position: relative;
   width: 90%;
   height: auto;
   margin: 20px auto 0;
 }
 
 @mixin beer-message {
+  position: relative;
+  width: 60%;
+  height: auto;
   color: variables.$light-color;
-  padding: 120px;
-  margin-left: -225px;
+  margin: 80px auto 0;
+  padding: 50px;
 }
 
 @mixin beer-message-768 {
-  margin-left: 0;
-  margin-top: 80px;
+  width: 80%;
   padding: 80px;
 }
 
 @mixin beer-message-500 {
-  margin-left: 0;
-  padding: 80px;
+  width: 100%;
 }
 
 @mixin beer-message-400 {
   margin-top: 120px;
   padding: 30px;
+}
+
+@mixin spinner {
+  .spinner {
+    position: relative;
+    margin: 10px auto;
+    border: 5px solid variables.$light-color;
+    border-top: 5px solid variables.$primary-color;
+    border-right: 5px solid variables.$secondary-color;
+    border-left: 5px solid variables.$tertiary-color;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @mixin beer-info {
@@ -87,7 +113,6 @@
   font-weight: variables.$font-weigth-large;
   text-align: center;
   padding: 10px 0;
-  // margin-bottom: 10px;
   border-bottom: 1px solid variables.$dark-color;
 }
 
