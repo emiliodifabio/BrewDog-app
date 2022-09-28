@@ -4,6 +4,10 @@
 .beer {
   @include mixins.beer-grid;
 
+  .message {
+    @include mixins.beer-message;
+  }
+
   .beer-info {
     .beer-info__name {
       @include mixins.beer-info;
@@ -354,6 +358,9 @@
 
 @media (max-width: 768px) {
   .beer {
+    .message {
+      @include mixins.beer-message-768;
+    }
     .beer-info {
       text-align: center;
       .beer-info-flex {
@@ -365,6 +372,10 @@
 
 @media (max-width: 500px) {
   .beer {
+    .message {
+      @include mixins.beer-message-500;
+    }
+
     .beer-info {
       .beer-info__name {
         padding: 5px 20px;
@@ -394,6 +405,14 @@
       .cards__tip {
         height: auto;
       }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .beer {
+    .message {
+      @include mixins.beer-message-400;
     }
   }
 }
