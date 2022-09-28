@@ -10,10 +10,15 @@ const timeout = function (s) {
   });
 };
 
-const showRecipe = async function () {
+const showRecipe = async function (url) {
+  // Spinner
+  const spinner = `<div class="spinner"></div>`;
+
+  recipeContainer.insertAdjacentHTML("afterbegin", spinner);
+
   // Loading recipe
   try {
-    const res = await fetch("https://api.punkapi.com/v2/beers?ids=88");
+    const res = await fetch(url);
     // const res = await fetch("https://api.punkapi.com/v2/beers?search=pasta");
     const data = await res.json();
     if (!res.ok) throw new Error(`data.message`)(`$(res.status)`);
@@ -65,7 +70,7 @@ const showRecipe = async function () {
       food: recipe.food_pairing,
     };
     console.log(recipe);
-    const food = recipe.food.join('; ');
+    const food = recipe.food.join("; ");
 
     // Rendering recipe
     const markup = `
@@ -260,16 +265,9 @@ const showRecipe = async function () {
 
     recipeContainer.innerHTML = "";
     recipeContainer.insertAdjacentHTML("afterbegin", markup);
-
-    const maltName = recipe.ingredients.malt
-      .map((malt) => {
-        return `<p class='cards__ingredients--malt-details'>${malt.name}</p>`;
-      })
-      .join("");
-    console.log(maltName);
   } catch (error) {
     console.error(error);
   }
 };
 
-showRecipe();
+showRecipe("https://api.punkapi.com/v2/beers?ids=40");
