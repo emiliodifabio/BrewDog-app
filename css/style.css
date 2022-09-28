@@ -695,6 +695,10 @@ form .search__btn .search__icon {
     width: 80%;
     padding: 80px;
   }
+  .beer .error {
+    width: 80%;
+    padding: 80px;
+  }
   .beer .beer-info {
     text-align: center;
   }
@@ -746,6 +750,10 @@ form .search__btn .search__icon {
     margin-top: 120px;
     padding: 30px;
   }
+  .beer .error {
+    margin-top: 120px;
+    padding: 30px;
+  }
 }
 body {
   background-color: #2c2a2b;
@@ -759,6 +767,14 @@ main {
 .container {
   display: grid;
   grid-template-columns: minmax(265px, max-content) minmax(min-content, 90%);
+}
+.container .error {
+  position: relative;
+  width: 60%;
+  height: auto;
+  color: #fff;
+  margin: 80px auto 0;
+  padding: 50px;
 }
 .container .search-results {
   grid-column: 1/2;
@@ -779,6 +795,17 @@ main {
     grid-area: beer;
     grid-column: 1/1;
     margin-top: -50px;
+  }
+}
+@media (max-width: 500px) {
+  .container .error {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .container .error {
+    margin-top: 120px;
+    padding: 30px;
   }
 }
 .footer {

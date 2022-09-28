@@ -2,6 +2,10 @@
 @use "../abstract/mixins";
 
 .container {
+  .error {
+    @include mixins.beer-message;
+  }
+
   display: grid;
   grid-template-columns: minmax(265px, max-content) minmax(min-content, 90%);
 
@@ -29,6 +33,22 @@
       grid-area: beer;
       grid-column: 1/1;
       margin-top: -50px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    .error {
+      @include mixins.beer-message-500;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    .error {
+      @include mixins.beer-message-400;
     }
   }
 }
