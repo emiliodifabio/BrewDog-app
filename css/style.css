@@ -240,6 +240,11 @@ form .search__btn .search__icon {
   height: auto;
   margin: 20px auto 0;
 }
+.beer .message {
+  color: #fff;
+  padding: 120px;
+  margin-left: -225px;
+}
 .beer .beer-info .beer-info__name {
   display: block;
   position: relative;
@@ -636,6 +641,11 @@ form .search__btn .search__icon {
   }
 }
 @media (max-width: 768px) {
+  .beer .message {
+    margin-left: 0;
+    margin-top: 80px;
+    padding: 80px;
+  }
   .beer .beer-info {
     text-align: center;
   }
@@ -644,6 +654,10 @@ form .search__btn .search__icon {
   }
 }
 @media (max-width: 500px) {
+  .beer .message {
+    margin-left: 0;
+    padding: 80px;
+  }
   .beer .beer-info .beer-info__name {
     padding: 5px 20px;
   }
@@ -667,6 +681,12 @@ form .search__btn .search__icon {
   }
   .beer .cards-w .cards__tip {
     height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .beer .message {
+    margin-top: 120px;
+    padding: 30px;
   }
 }
 body {
