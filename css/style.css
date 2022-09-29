@@ -280,7 +280,7 @@ form .search__btn .search__icon {
 .beer {
   position: relative;
   width: 90%;
-  height: auto;
+  min-height: 100vh;
   margin: 20px auto 0;
 }
 .beer .message {

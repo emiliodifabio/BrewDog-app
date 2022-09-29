@@ -16,7 +16,7 @@
 @mixin beer-grid {
   position: relative;
   width: 90%;
-  height: auto;
+  min-height: 100vh;
   margin: 20px auto 0;
 }
 

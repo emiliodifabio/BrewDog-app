@@ -1,4 +1,6 @@
 import { container, punkapi } from "./config";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 const recipeContainer = document.querySelector(".beer");
 
@@ -17,12 +19,16 @@ const renderSpinner = (parentEl) => {
   parentEl.insertAdjacentHTML("afterbegin", markup);
 };
 
-const showRecipe = async function (url) {
+const showRecipe = async function () {
   try {
+    const id = window.location.hash.slice(1);
+    console.log(id);
+
+
     // Loading recipe
     renderSpinner(recipeContainer);
 
-    const res = await fetch(url);
+    const res = await fetch(`https://api.punkapi.com/v2/beers?ids=${id}`);
     // const res = await fetch("https://api.punkapi.com/v2/beers?search=pasta");
     const data = await res.json();
     if (!res.ok) throw new Error(`data.message`)(`$(res.status)`);
@@ -281,4 +287,5 @@ const showRecipe = async function (url) {
   }
 };
 
-showRecipe("https://api.punkapi.com/v2/beers?ids=18");
+window.addEventListener("hashchange", showRecipe);
+window.addEventListener("load", showRecipe);
