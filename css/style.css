@@ -451,7 +451,7 @@ form .search__btn .search__icon {
   background-color: #f29f05;
   border-radius: 50px;
   width: 300px;
-  height: 125px;
+  height: 150px;
   text-align: center;
   grid-area: method;
 }
@@ -616,7 +616,7 @@ form .search__btn .search__icon {
   background-color: #f29f05;
   border-radius: 50px;
   width: 300px;
-  height: 125px;
+  height: 150px;
   grid-area: food;
 }
 .beer .cards-w .cards__food .cards__food--title {
@@ -627,8 +627,8 @@ form .search__btn .search__icon {
 }
 .beer .cards-w .cards__food .cards__food--text {
   text-align: left;
-  padding: 10px 25px;
-  margin-bottom: 5px;
+  padding: 8px 25px;
+  margin-bottom: 10px;
 }
 .beer .cards-w .cards__image {
   background-color: #f29f05;
@@ -651,7 +651,7 @@ form .search__btn .search__icon {
   background-color: #f29f05;
   border-radius: 50px;
   width: 300px;
-  height: 125px;
+  height: 150px;
   grid-area: tip;
 }
 .beer .cards-w .cards__tip .cards__tip--title {
@@ -662,8 +662,8 @@ form .search__btn .search__icon {
 }
 .beer .cards-w .cards__tip .cards__tip--text {
   text-align: left;
-  padding: 10px 25px;
-  margin-bottom: 5px;
+  padding: 8px 25px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1200px) {

@@ -5,19 +5,23 @@ const recipeContainer = document.querySelector(".beer");
 const timeout = function (s) {
   return new Promise((_, reject) => {
     setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout aster ${s} second`));
+      reject(new Error(`Request took too long! Timeout faster ${s} second`));
     }, s * 1000);
   });
 };
 
+const renderSpinner = (parentEl) => {
+  const markup = `<div class="spinner"></div>`;
+
+  parentEl.innerHTML = "";
+  parentEl.insertAdjacentHTML("afterbegin", markup);
+};
+
 const showRecipe = async function (url) {
-  // Spinner
-  const spinner = `<div class="spinner"></div>`;
-
-  recipeContainer.insertAdjacentHTML("afterbegin", spinner);
-
-  // Loading recipe
   try {
+    // Loading recipe
+    renderSpinner(recipeContainer);
+
     const res = await fetch(url);
     // const res = await fetch("https://api.punkapi.com/v2/beers?search=pasta");
     const data = await res.json();
@@ -80,7 +84,7 @@ const showRecipe = async function (url) {
               recipe.firstBrewed
             }</h2>
             <div class="beer-info-flex">
-              <h3 class="beer-info__tagline">${recipe.tagline}</h3>
+              <h3 class="beer-info__tagline">«${recipe.tagline}»</h3>
               <div class="beer-info--abv-ibu-og-w">
                 <div class="beer-info--abv-w">
                   <h4 class="beer-info--abv">Abv:</h4>
@@ -201,7 +205,14 @@ const showRecipe = async function (url) {
               <div class="cards__ingredients--hops-details-w">
               ${recipe.ingredients.hops
                 .map((hops) => {
-                  return `<p class="cards__ingredients--hops-details">${`${hops.name.split(' ')[0].concat(' ').concat(hops.name.split(' ')[1] && hops.name.length > 13 ? hops.name.split(' ').slice(1,-1).join(' ') : '')}`}</p>`;
+                  return `<p class="cards__ingredients--hops-details">${`${hops.name
+                    .split(" ")[0]
+                    .concat(" ")
+                    .concat(
+                      hops.name.split(" ")[1] && hops.name.length > 13
+                        ? hops.name.split(" ").slice(1, -1).join(" ")
+                        : ""
+                    )}`}</p>`;
                 })
                 .join("")}
               </div>
@@ -270,4 +281,4 @@ const showRecipe = async function (url) {
   }
 };
 
-showRecipe("https://api.punkapi.com/v2/beers?ids=40");
+showRecipe("https://api.punkapi.com/v2/beers?ids=18");
