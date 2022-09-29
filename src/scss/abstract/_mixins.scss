@@ -54,7 +54,7 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: spin .5s linear infinite;
+    animation: spin 0.5s linear infinite;
   }
 
   @keyframes spin {
@@ -73,7 +73,7 @@
   width: 100%;
   height: auto;
   text-transform: uppercase;
-  padding: 0px 20px;
+  padding: 5px 25px;
   border-radius: variables.$border-radius;
   box-shadow: variables.$box-shadow;
   background-color: variables.$primary-color;
@@ -104,6 +104,44 @@
 }
 
 //cards
+@mixin cards-w {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-areas:
+    "description ingredients image"
+    "basics ingredients image"
+    "method food tip";
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  place-content: center;
+  place-items: center;
+  gap: 15px;
+}
+
+@mixin cards-w-1200 {
+  grid-template-columns: repeat(2, 300px);
+  grid-template-areas:
+    "description image"
+    "basics image"
+    "method ingredients"
+    "tip ingredients"
+    "food ingredients";
+}
+
+@mixin cards-w-960 {
+  grid-template-columns: 300px;
+  grid-template-areas:
+    "image"
+    "description"
+    "ingredients"
+    "basics"
+    "method"
+    "food"
+    "tip";
+}
+
 @mixin cards-bg {
   background-color: variables.$primary-color;
   border-radius: variables.$border-radius;
@@ -154,7 +192,7 @@
   margin: 0 5px;
 }
 
-@mixin cards-details-ingredients-yeast-w-500 {
+@mixin cards-details-ingredients-yeast-w-960 {
   margin-bottom: 20px;
 }
 
@@ -183,6 +221,10 @@
   padding: 0px 20px;
   margin-top: 40px;
   text-align: left;
+
+}
+@mixin cards-ingredients-title-960 {
+  margin-top: 20px;
 }
 
 @mixin cards-ingredients-malt-title-500 {

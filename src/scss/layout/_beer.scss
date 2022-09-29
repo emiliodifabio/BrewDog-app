@@ -12,21 +12,17 @@
   .beer-info {
     .beer-info__name {
       @include mixins.beer-info;
-      height: 50px;
       font-weight: variables.$font-weigth-large;
       z-index: 0;
     }
     .beer-info__brewed {
       @include mixins.beer-info;
-      height: 50px;
-      padding: 5px 20px;
       z-index: -1;
     }
 
     .beer-info-flex {
       @include mixins.beer-info;
       @include mixins.beer-info-flex;
-      height: 50px;
       z-index: -2;
 
       .beer-info__tagline {
@@ -63,19 +59,7 @@
   }
 
   .cards-w {
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-areas:
-      "description ingredients image"
-      "basics ingredients image"
-      "method food tip";
-    width: 100%;
-    height: auto;
-    margin: 30px auto;
-    place-content: center;
-    place-items: center;
-    gap: 15px;
+    @include mixins.cards-w;
 
     .cards__description {
       @include mixins.cards-bg;
@@ -173,7 +157,6 @@
       @include mixins.cards-bg;
       @include mixins.card-300x615;
       grid-area: ingredients;
-
       text-align: center;
 
       .cards__ingredients--title {
@@ -212,6 +195,7 @@
 
       .cards__ingredients--hops-details-w {
         @include mixins.cards-details-ingredients-w;
+        max-width: 100px;
         transform: translateY(22px);
 
         .cards__ingredients--hops-details {
@@ -329,13 +313,7 @@
     }
 
     .cards-w {
-      grid-template-columns: repeat(2, 300px);
-      grid-template-areas:
-        "description image"
-        "basics image"
-        "method ingredients"
-        "tip ingredients"
-        "food ingredients";
+      @include mixins.cards-w-1200;
 
       .cards__method {
         .cards__method--details-w {
@@ -349,19 +327,40 @@
 @media (max-width: 960px) {
   .beer {
     .cards-w {
-      grid-template-columns: 300px;
-      grid-template-areas:
-        "image"
-        "description"
-        "ingredients"
-        "basics"
-        "method"
-        "food"
-        "tip";
+      @include mixins.cards-w-960;
+
+      .cards__description {
+        height: auto;
+      }
+      .cards__ingredients {
+        height: auto;
+
+        .cards__ingredients--yeast-details-w {
+          @include mixins.cards-details-ingredients-yeast-w-960;
+        }
+
+        .cards__ingredients--malt-title {
+          @include mixins.cards-ingredients-title-960;
+        }
+
+      }
+      .cards__basics {
+        height: auto;
+      }
+      .cards__method {
+        height: auto;
+      }
+      .cards__food {
+        height: auto;
+      }
+      .cards__tip {
+        height: auto;
+      }
     }
   }
 }
 
+// MEDIA QUERY
 @media (max-width: 768px) {
   .beer {
     top: 70px;
@@ -388,8 +387,6 @@
       @include mixins.beer-message-500;
     }
 
-
-
     .beer-info {
       .beer-info__name {
         padding: 3px 20px;
@@ -401,35 +398,15 @@
     }
 
     .cards-w {
-      .cards__description {
-        height: auto;
-      }
       .cards__ingredients {
-        height: auto;
-
         .cards__ingredients--malt-title {
           @include mixins.cards-ingredients-malt-title-500;
         }
-
-        .cards__ingredients--yeast-details-w {
-          @include mixins.cards-details-ingredients-yeast-w-500;
-        }
       }
       .cards__basics {
-        height: auto;
-
         .cards__basics--unit-details-w {
           @include mixins.cards-details-w-500;
         }
-      }
-      .cards__method {
-        height: auto;
-      }
-      .cards__food {
-        height: auto;
-      }
-      .cards__tip {
-        height: auto;
       }
     }
   }

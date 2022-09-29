@@ -201,7 +201,7 @@ const showRecipe = async function (url) {
               <div class="cards__ingredients--hops-details-w">
               ${recipe.ingredients.hops
                 .map((hops) => {
-                  return `<p class="cards__ingredients--hops-details">${hops.name}</p>`;
+                  return `<p class="cards__ingredients--hops-details">${`${hops.name.split(' ')[0].concat(' ').concat(hops.name.split(' ')[1] && hops.name.length > 13 ? hops.name.split(' ').slice(1,-1).join(' ') : '')}`}</p>`;
                 })
                 .join("")}
               </div>
