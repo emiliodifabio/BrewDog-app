@@ -12,6 +12,8 @@
     "parcel": "^2.7.0"
   },
   "dependencies": {
-    "punkapi-db": "^2.6.0"
+    "core-js": "^3.25.3",
+    "punkapi-db": "^2.6.0",
+    "regenerator-runtime": "^0.13.9"
   }
 }
