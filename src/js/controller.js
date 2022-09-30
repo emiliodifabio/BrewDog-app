@@ -17,13 +17,12 @@ const timeout = function (s) {
     }, s * 1000);
   });
 };
-
-
 //////////////////////////////////////////////////
 
-// SHOW FUNCTION
+// SHOW RECIPE FUNCTION
 const controlRecipes = async function () {
   try {
+
     const id = window.location.hash.slice(1);
     console.log(id);
 
@@ -44,3 +43,4 @@ const controlRecipes = async function () {
 
 // WHEN CALL SHOW FUNCTION
 ["hashchange", "load"].forEach((ev) => window.addEventListener(ev, controlRecipes));
+//////////////////////////////////////////////////

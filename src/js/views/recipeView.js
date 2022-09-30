@@ -5,9 +5,8 @@ class RecipeView {
   render(data) {
     this.#data = data;
     const markup = this.#generateMarkup();
-    this.#clear;
+    this.#clear();
     this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-    // const food = data.food.join("; ");
   }
 
   #clear() {
@@ -16,7 +15,7 @@ class RecipeView {
 
   renderSpinner = () => {
     const markup = `<div class="spinner"></div>`;
-  
+
     this.#parentEl.innerHTML = "";
     this.#parentEl.insertAdjacentHTML("afterbegin", markup);
   };
