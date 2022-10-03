@@ -15,7 +15,6 @@ class RecipeView {
 
   renderSpinner = () => {
     const markup = `<div class="spinner"></div>`;
-
     this.#parentEl.innerHTML = "";
     this.#parentEl.insertAdjacentHTML("afterbegin", markup);
   };
