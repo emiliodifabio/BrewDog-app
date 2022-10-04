@@ -9,20 +9,9 @@ import "regenerator-runtime/runtime";
 const recipeContainer = document.querySelector(".beer");
 //////////////////////////////////////////////////
 
-// SMALL FUNCTIONS
-const timeout = function (s) {
-  return new Promise((_, reject) => {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout faster ${s} second`));
-    }, s * 1000);
-  });
-};
-//////////////////////////////////////////////////
-
 // SHOW RECIPE FUNCTION
 const controlRecipes = async function () {
   try {
-
     const id = window.location.hash.slice(1);
     console.log(id);
 
@@ -41,6 +30,8 @@ const controlRecipes = async function () {
 };
 //////////////////////////////////////////////////
 
-// WHEN CALL SHOW FUNCTION
-["hashchange", "load"].forEach((ev) => window.addEventListener(ev, controlRecipes));
-//////////////////////////////////////////////////
+const init = function () {
+  // WHEN CALL SHOW FUNCTION
+  recipeView.addHandlerRender(controlRecipes);
+};
+init();
