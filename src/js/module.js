@@ -1,5 +1,6 @@
 import { async } from "regenerator-runtime";
 import { API_URL } from "./config";
+import { punkapi } from "./config";
 import { getJSON } from "./helpers";
 
 export const state = {
@@ -57,7 +58,29 @@ export const loadRecipe = async function (id) {
       food: recipe.food_pairing,
     };
   } catch (error) {
-    console.log(`${error} ⚠️⚠️⚠️`);
+    console.error(`${error} ⚠️⚠️⚠️`);
     throw error;
   }
 };
+
+export const loadSearchResults = async function (query) {
+  try {
+    // const data = await getJSON(`${API_URL}malt=${query.replace(' ','_')}`);
+    const data = await getJSON(
+      `${API_URL}${
+        `malt=${query}` ||
+        `beer_name=${query}` ||
+        `brewed_after=${query}` ||
+        `hops=${query}` ||
+        `yeast=${query}`
+      }`
+    );
+    console.log(data);
+  } catch (error) {
+    console.error(`${error} ⚠️⚠️⚠️`);
+    throw error;
+  }
+};
+loadSearchResults("american");
+
+// console.log(punkapi);

@@ -49,7 +49,7 @@ class RecipeView {
   }
 
   #generateMarkup() {
-    console.log(this.#data);
+    // console.log(this.#data);
     return `
       <div class="beer-info">
               <h1 class="beer-info__name">${this.#data.title}</h1>
