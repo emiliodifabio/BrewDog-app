@@ -1,6 +1,9 @@
 class RecipeView {
   #parentEl = document.querySelector(".beer");
   #data;
+  #errorMessage = "⚠️ No beers found for your query. Please try again!";
+  #message =
+    "Start by searching for a beer, ingredient (malt, hops, yeast), first brewed's year. Have fun!";
 
   render(data) {
     this.#data = data;
@@ -15,9 +18,29 @@ class RecipeView {
 
   renderSpinner = () => {
     const markup = `<div class="spinner"></div>`;
-    this.#parentEl.innerHTML = "";
+    this.#clear();
     this.#parentEl.insertAdjacentHTML("afterbegin", markup);
   };
+
+  renderError(message = this.#errorMessage) {
+    const markup = `
+    <div class="error">
+          <h4>${message}</h4>
+        </div>`;
+
+    this.#clear();
+    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
+  }
+
+  renderMessage(message = this.#message) {
+    const markup = `
+    <div class="message">
+    <h4>${message}</h4>
+  </div>`;
+
+    this.#clear();
+    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
+  }
 
   addHandlerRender(handler) {
     ["hashchange", "load"].forEach((ev) =>

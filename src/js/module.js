@@ -57,6 +57,7 @@ export const loadRecipe = async function (id) {
       food: recipe.food_pairing,
     };
   } catch (error) {
-    console.error(`${error} ⚠️⚠️⚠️`);
+    console.log(`${error} ⚠️⚠️⚠️`);
+    throw error;
   }
 };
