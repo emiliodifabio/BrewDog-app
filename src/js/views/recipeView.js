@@ -3,8 +3,7 @@ import View from "./View.js";
 class RecipeView extends View {
   _parentEl = document.querySelector(".beer");
   _errorMessage = "⚠️ No beers found for your query. Please try again!";
-  _message =
-    "Start by searching for a beer, ingredient (malt, hops, yeast), first brewed's year. Have fun!";
+  _message = "";
 
   addHandlerRender(handler) {
     ["hashchange", "load"].forEach((ev) =>
