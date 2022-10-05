@@ -1,18 +1,22 @@
 import { async } from "regenerator-runtime";
-import { API_URL } from "./config";
-import { punkapi } from "./config";
-import { getJSON } from "./helpers";
+import { API_URL } from "./config.js";
+import { punkapi } from "./config.js";
+import { getJSON } from "./helpers.js";
 
 export const state = {
   recipe: {},
+  search: {
+    query: "",
+    results: [],
+  },
 };
 
 export const loadRecipe = async function (id) {
   try {
     const data = await getJSON(`${API_URL}ids=${id}`);
+    console.log(data);
 
     const { 0: recipe } = data;
-    // console.log(recipe);
 
     state.recipe = {
       id: recipe.id,
@@ -65,22 +69,21 @@ export const loadRecipe = async function (id) {
 
 export const loadSearchResults = async function (query) {
   try {
-    // const data = await getJSON(`${API_URL}malt=${query.replace(' ','_')}`);
+    state.search.query = query;
     const data = await getJSON(
-      `${API_URL}${
-        `malt=${query}` ||
-        `beer_name=${query}` ||
-        `brewed_after=${query}` ||
-        `hops=${query}` ||
-        `yeast=${query}`
-      }`
+      `${API_URL}beer_name=${query.replace(" ", "_")}`
     );
-    console.log(data);
+    state.search.results = data.map((recipe) => {
+      return {
+        id: recipe.id,
+        title: recipe.name,
+        ingredients: {
+          malt: recipe.ingredients.malt[0].name,
+        },
+      };
+    });
   } catch (error) {
     console.error(`${error} ⚠️⚠️⚠️`);
     throw error;
   }
 };
-loadSearchResults("american");
-
-// console.log(punkapi);

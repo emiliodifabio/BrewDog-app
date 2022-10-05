@@ -1,46 +1,10 @@
-class RecipeView {
-  #parentEl = document.querySelector(".beer");
-  #data;
-  #errorMessage = "⚠️ No beers found for your query. Please try again!";
-  #message =
+import View from "./View.js";
+
+class RecipeView extends View {
+  _parentEl = document.querySelector(".beer");
+  _errorMessage = "⚠️ No beers found for your query. Please try again!";
+  _message =
     "Start by searching for a beer, ingredient (malt, hops, yeast), first brewed's year. Have fun!";
-
-  render(data) {
-    this.#data = data;
-    const markup = this.#generateMarkup();
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-  }
-
-  #clear() {
-    this.#parentEl.innerHTML = "";
-  }
-
-  renderSpinner = () => {
-    const markup = `<div class="spinner"></div>`;
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-  };
-
-  renderError(message = this.#errorMessage) {
-    const markup = `
-    <div class="error">
-          <h4>${message}</h4>
-        </div>`;
-
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-  }
-
-  renderMessage(message = this.#message) {
-    const markup = `
-    <div class="message">
-    <h4>${message}</h4>
-  </div>`;
-
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-  }
 
   addHandlerRender(handler) {
     ["hashchange", "load"].forEach((ev) =>
@@ -48,30 +12,29 @@ class RecipeView {
     );
   }
 
-  #generateMarkup() {
-    // console.log(this.#data);
+  _generateMarkup() {
     return `
       <div class="beer-info">
-              <h1 class="beer-info__name">${this.#data.title}</h1>
+              <h1 class="beer-info__name">${this._data.title}</h1>
               <h2 class="beer-info__brewed">First Brewed ${
-                this.#data.firstBrewed
+                this._data.firstBrewed
               }</h2>
               <div class="beer-info-flex">
-                <h3 class="beer-info__tagline">«${this.#data.tagline}»</h3>
+                <h3 class="beer-info__tagline">«${this._data.tagline}»</h3>
                 <div class="beer-info--abv-ibu-og-w">
                   <div class="beer-info--abv-w">
                     <h4 class="beer-info--abv">Abv:</h4>
                     <h4 class="beer-info--abv-val">${
-                      this.#data.basics.abv
+                      this._data.basics.abv
                     }%</h4>
                   </div>
                   <div class="beer-info--ibu-w">
                     <h4 class="beer-info--ibu">Ibu:</h4>
-                    <h4 class="beer-info--ibu-val">${this.#data.basics.ibu}</h4>
+                    <h4 class="beer-info--ibu-val">${this._data.basics.ibu}</h4>
                   </div>
                   <div class="beer-info--og-w">
                     <h4 class="beer-info--og">Og:</h4>
-                    <h4 class="beer-info--og-val">${this.#data.basics.og}</h4>
+                    <h4 class="beer-info--og-val">${this._data.basics.og}</h4>
                   </div>
                 </div>
               </div>
@@ -80,7 +43,7 @@ class RecipeView {
               <div class="cards__description">
                 <h5 class="cards__description--title">The beer is...</h5>
                 <p class="cards__description--text">
-                ${this.#data.description}
+                ${this._data.description}
                 </p>
               </div>
               <div class="cards__basics">
@@ -98,29 +61,29 @@ class RecipeView {
                 </div>
                 <div class="cards__basics--unit-EU-w">
                   <p class="cards__basics--unit-EU">${
-                    this.#data.basics.volume.eu
+                    this._data.basics.volume.eu
                   }l</p>
                   <p class="cards__basics--unit-EU">${
-                    this.#data.basics.boilVolume.eu
+                    this._data.basics.boilVolume.eu
                   }l</p>
                 </div>
                 <div class="cards__basics--unit-US-w">
                   <p class="cards__basics--unit-US">${
-                    this.#data.basics.volume.us
+                    this._data.basics.volume.us
                   }gal</p>
                   <p class="cards__basics--unit-US">${
-                    this.#data.basics.boilVolume.us
+                    this._data.basics.boilVolume.us
                   }gal</p>
                   <p class="cards__basics--unit-US">${
-                    this.#data.basics.abv
+                    this._data.basics.abv
                   }%</p>
-                  <p class="cards__basics--unit-US">${this.#data.basics.fg}</p>
-                  <p class="cards__basics--unit-US">${this.#data.basics.og}</p>
-                  <p class="cards__basics--unit-US">${this.#data.basics.ebc}</p>
-                  <p class="cards__basics--unit-US">${this.#data.basics.srm}</p>
-                  <p class="cards__basics--unit-US">${this.#data.basics.ph}</p>
+                  <p class="cards__basics--unit-US">${this._data.basics.fg}</p>
+                  <p class="cards__basics--unit-US">${this._data.basics.og}</p>
+                  <p class="cards__basics--unit-US">${this._data.basics.ebc}</p>
+                  <p class="cards__basics--unit-US">${this._data.basics.srm}</p>
+                  <p class="cards__basics--unit-US">${this._data.basics.ph}</p>
                   <p class="cards__basics--unit-US">${
-                    this.#data.basics.attenuationLevel
+                    this._data.basics.attenuationLevel
                   }%</p>
                 </div>
               </div>
@@ -132,18 +95,18 @@ class RecipeView {
                 </div>
                 <div class="cards__method--unit-EU-w">
                   <p class="cards__method--unit-EU">${
-                    this.#data.method.mashTemp.eu
+                    this._data.method.mashTemp.eu
                   }°C</p>
                   <p class="cards__method--unit-EU">${
-                    this.#data.method.fermentation.eu
+                    this._data.method.fermentation.eu
                   }°C</p>
                 </div>
                 <div class="cards__method--unit-US-w">
                   <p class="cards__method--unit-US">${
-                    this.#data.method.mashTemp.us
+                    this._data.method.mashTemp.us
                   }°F</p>
                   <p class="cards__method--unit-US">${
-                    this.#data.method.fermentation.us
+                    this._data.method.fermentation.us
                   }°F</p>
                 </div>
               </div>
@@ -151,14 +114,14 @@ class RecipeView {
                 <h5 class="cards__ingredients--title">Ingredients</h5>
                 <h5 class="cards__ingredients--malt-title">Malt</h5>
                 <div class="cards__ingredients--malt-details-w">
-                   ${this.#data.ingredients.malt
+                   ${this._data.ingredients.malt
                      .map((malt) => {
                        return `<p class='cards__ingredients--malt-details'>${malt.name}</p>`;
                      })
                      .join("")}
                 </div>
                 <div class="cards__ingredients--malt-unit-EU-w">
-                  ${this.#data.ingredients.malt
+                  ${this._data.ingredients.malt
                     .map((malt) => {
                       return `
                     <p class="cards__ingredients--malt-unit-EU">${malt.amount.value}kg</p>
@@ -167,7 +130,7 @@ class RecipeView {
                     .join("")}
                 </div>
                 <div class="cards__ingredients--malt-unit-US-w">
-                ${this.#data.ingredients.malt
+                ${this._data.ingredients.malt
                   .map((malt) => {
                     return `
                   <p class="cards__ingredients--malt-unit-US">${(
@@ -180,7 +143,7 @@ class RecipeView {
                 </div>
                 <h5 class="cards__ingredients--hops-title">Hops</h5>
                 <div class="cards__ingredients--hops-details-w">
-                ${this.#data.ingredients.hops
+                ${this._data.ingredients.hops
                   .map((hops) => {
                     return `<p class="cards__ingredients--hops-details">${`${hops.name
                       .split(" ")[0]
@@ -195,7 +158,7 @@ class RecipeView {
                 </div>
                 <div class="cards__ingredients--hops-unit-w">
                   <p class="cards__ingredients--hops-unit-t">g</p>
-                  ${this.#data.ingredients.hops
+                  ${this._data.ingredients.hops
                     .map((hops) => {
                       return `<p class="cards__ingredients--hops-unit">${hops.amount.value}</p>`;
                     })
@@ -203,7 +166,7 @@ class RecipeView {
                 </div>
                 <div class="cards__ingredients--hops-add-w">
                   <p class="cards__ingredients--hops-add-t">Add</p>
-                  ${this.#data.ingredients.hops
+                  ${this._data.ingredients.hops
                     .map((hops) => {
                       return `<p class="cards__ingredients--hops-add">${hops.add
                         .slice(0, 1)
@@ -214,7 +177,7 @@ class RecipeView {
                 </div>
                 <div class="cards__ingredients--hops-attribute-w">
                   <p class="cards__ingredients--hops-attribute-t">Attribute</p>
-                  ${this.#data.ingredients.hops
+                  ${this._data.ingredients.hops
                     .map((hops) => {
                       return `<p class="cards__ingredients--hops-attribute">${hops.attribute
                         .slice(0, 1)
@@ -226,19 +189,19 @@ class RecipeView {
                 <h5 class="cards__ingredients--yeast-title">Yeast</h5>
                 <div class="cards__ingredients--yeast-details-w">
                   <p class="cards__ingredients--yeast-details">
-                    ${this.#data.ingredients.yeast}
+                    ${this._data.ingredients.yeast}
                   </p>
                 </div>
               </div>
               <div class="cards__food">
                 <h5 class="cards__food--title">Food pairing</h5>
                 <p class="cards__food--text">
-                  ${this.#data.food.join("; ")}
+                  ${this._data.food.join("; ")}
                 </p>
               </div>
               <div class="cards__image">
                 <img
-                  src="${this.#data.image}"
+                  src="${this._data.image}"
                   alt="Beer packaging"
                   class="cards__image--img"
                 />
@@ -246,7 +209,7 @@ class RecipeView {
               <div class="cards__tip">
                 <h5 class="cards__tip--title">Tip</h5>
                 <p class="cards__tip--text">
-                  ${this.#data.tip}
+                  ${this._data.tip}
                 </p>
               </div>
             </div>`;
