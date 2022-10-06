@@ -4,11 +4,12 @@
 .search-results {
   display: block;
   position: relative;
-  min-width: 265px;
-  height: fit-content;
+  width: 300px;
+  max-height: 800px;
   top: -90px;
   background-color: variables.$results-bg-color;
   border-radius: variables.$border-radius-results;
+  overflow-y: auto;
   z-index: 0;
 
   .results {
@@ -46,6 +47,7 @@
 
 @media (max-width: 768px) {
   .search-results {
+    width: 100%;
     .results {
       text-align: center;
     }

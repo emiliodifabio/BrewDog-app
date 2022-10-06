@@ -6,7 +6,6 @@ class ResultsView extends View {
 
   _generateMarkup() {
     return `
-   
               ${this._data.map((data) => {
                return `
           <li class="preview">
@@ -16,8 +15,7 @@ class ResultsView extends View {
                    <p class="preview__malt">${data.ingredients.malt}</p>`;}).join("")}
                  </div>
              </a>
-           </li>
-       
+           </li>       
         `;
   }
 }

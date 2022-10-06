@@ -363,7 +363,6 @@
 // MEDIA QUERY
 @media (max-width: 768px) {
   .beer {
-    top: 70px;
 
     .message {
       @include mixins.beer-message-768;

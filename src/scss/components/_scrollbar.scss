@@ -1,0 +1,27 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+::-webkit-scrollbar {
+  border-radius: 40px;
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: variables.$primary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: variables.$tertiary-color;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 50px;
+}
