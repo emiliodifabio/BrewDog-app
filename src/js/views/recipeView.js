@@ -13,6 +13,7 @@ class RecipeView extends View {
 
   _generateMarkup() {
     return `
+    <section class="beer">
       <div class="beer-info">
               <h1 class="beer-info__name">${this._data.title}</h1>
               <h2 class="beer-info__brewed">First Brewed ${
@@ -211,8 +212,12 @@ class RecipeView extends View {
                   ${this._data.tip}
                 </p>
               </div>
-            </div>`;
+            </div>
+           </section>
+       </div>
+    </main>`;
   }
+
 }
 
 export default new RecipeView();
