@@ -1,6 +1,6 @@
-import { async } from "regenerator-runtime";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+// import { async } from "regenerator-runtime";
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
 
 import * as model from "./module.js";
 import recipeView from "./views/recipeView.js";

@@ -6,6 +6,7 @@ class RecipeView extends View {
   _message = "";
 
   addHandlerRender(handler) {
+    // al cambio di hash dell'url o al caricamento della pagina con lo stesso hash, mostra la ricetta
     ["hashchange", "load"].forEach((ev) =>
       window.addEventListener(ev, handler)
     );
@@ -13,7 +14,6 @@ class RecipeView extends View {
 
   _generateMarkup() {
     return `
-    <section class="beer">
       <div class="beer-info">
               <h1 class="beer-info__name">${this._data.title}</h1>
               <h2 class="beer-info__brewed">First Brewed ${
@@ -213,11 +213,7 @@ class RecipeView extends View {
                 </p>
               </div>
             </div>
-           </section>
-       </div>
-    </main>`;
+            ;`
   }
-
 }
-
 export default new RecipeView();
