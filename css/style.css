@@ -884,6 +884,9 @@ body {
 .search-results .results {
   margin: 100px 0 0 0;
 }
+.search-results .results .error {
+  width: 100%;
+}
 .search-results .results .preview {
   padding: 10px;
 }
