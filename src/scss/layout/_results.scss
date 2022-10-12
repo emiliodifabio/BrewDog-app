@@ -2,6 +2,7 @@
 @use "../abstract/mixins";
 
 .search-results {
+  
   display: block;
   position: relative;
   width: 300px;
@@ -11,20 +12,20 @@
   border-radius: variables.$border-radius-results;
   overflow-y: auto;
   z-index: 0;
-
+  
   .results {
     margin: 100px 0 0 0;
-
+    
     .error {
       width: 100%;
     }
-
+    
     .preview {
       padding: 10px;
-
+      
       .preview__link {
         color: variables.$dark-color;
-
+        
         .preview__data {
           .preview__malt {
             font-style: italic;
@@ -32,21 +33,25 @@
         }
       }
     }
-
+    
     .selected {
       background-color: variables.$primary-color;
     }
-
+    
     .preview:hover {
       background-color: variables.$primary-color;
       transition: all 0.3s;
-    
+      
     }
     .preview:focus {
       background-color: variables.$primary-color;
       transition: all 0.3s;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 768px) {

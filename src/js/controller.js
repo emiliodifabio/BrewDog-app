@@ -10,13 +10,13 @@ import resultsView from "./views/resultsView.js";
 // PREVENT PAGE RELOAD WHEN RESULTS LIST IS SHOWING
 if (module.hot) {
   module.hot.accept();
-};
+}
 
 // SHOW RECIPE
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
-    
+
     if (!id) return;
     console.log(id);
     recipeView.renderSpinner();
@@ -28,7 +28,6 @@ const controlRecipes = async function () {
     // Rendering recipe
     recipeView.render(model.state.recipe);
     console.log(recipeView);
-    
   } catch (error) {
     recipeView.renderError();
   }
@@ -42,16 +41,17 @@ const controlSearchResults = async function () {
 
     // 1) Get search query
     const query = searchView.getQuery();
-    if (!query) return
+    if (!query) return;
 
     // 2) Load results
     await model.loadSearchResults(query);
 
     // 3) Render results
+    resultsView.removeHidden();
     resultsView.render(model.state.search.results);
 
   } catch (error) {
-    resultsView.renderError()
+    resultsView.renderError();
   }
 };
 

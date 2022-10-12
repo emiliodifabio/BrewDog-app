@@ -1,12 +1,20 @@
 export default class View {
   _data;
 
+  // removeHidden() {
+  //   // `this.${el}.classList.remove("hidden")`;
+  //   this._searchW.classList.remove("hidden");
+
+  //   // console.log(el);
+  // }
+
   render(data) {
-    if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
     this._data = data;
     const markup = this._generateMarkup();
     this._clear();
-    this._parentEl.insertAdjacentHTML('afterbegin', markup);
+    this._parentEl.insertAdjacentHTML("afterbegin", markup);
   }
 
   _clear() {

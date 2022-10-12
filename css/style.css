@@ -908,6 +908,10 @@ body {
   transition: all 0.3s;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .search-results {
     width: 100%;
