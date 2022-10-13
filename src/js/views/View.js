@@ -1,13 +1,6 @@
 export default class View {
   _data;
 
-  // removeHidden() {
-  //   // `this.${el}.classList.remove("hidden")`;
-  //   this._searchW.classList.remove("hidden");
-
-  //   // console.log(el);
-  // }
-
   render(data) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();

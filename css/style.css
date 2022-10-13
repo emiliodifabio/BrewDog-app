@@ -159,8 +159,12 @@ form .search__btn .search__icon {
 }
 
 .pagination {
-  margin-top: auto;
-  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  padding: 10px 20px;
 }
 .pagination .btn--inline {
   display: flex;
@@ -171,12 +175,6 @@ form .search__btn .search__icon {
   background-color: #2c2a2b;
   color: #f28705;
   transition: all 0.2s;
-}
-.pagination .pagination__btn--next {
-  float: right;
-}
-.pagination .pagination__btn--prev {
-  float: left;
 }
 
 .header .header__logo {
@@ -192,8 +190,8 @@ form .search__btn .search__icon {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: #f1f1f1;
+  border-radius: 5px;
+  background: #2c2a2b;
 }
 
 /* Handle */
@@ -254,10 +252,11 @@ form .search__btn .search__icon {
 }
 @media (max-width: 500px) {
   .header .search {
-    width: 250px;
+    width: 290px;
   }
   .header .search__field {
-    padding: 0 14px;
+    width: 82%;
+    padding: 0 13px;
   }
 }
 .beer .spinner {
@@ -660,13 +659,13 @@ form .search__btn .search__icon {
   border-radius: 50px;
   width: 300px;
   height: 615px;
-  padding: 5px;
-  text-align: center;
+  display: grid;
+  position: relative;
+  place-content: center;
   grid-area: image;
 }
 .beer .cards-w .cards__image .cards__image--img {
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 610px;
 }
 .beer .cards-w .cards__tip > div {
   display: inline-flex;
@@ -677,6 +676,7 @@ form .search__btn .search__icon {
   border-radius: 50px;
   width: 300px;
   height: 150px;
+  overflow-y: scroll;
   grid-area: tip;
 }
 .beer .cards-w .cards__tip .cards__tip--title {
@@ -783,7 +783,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(265px, max-content) minmax(min-content, 90%);
+  grid-template-columns: minmax(300px, max-content) minmax(min-content, 90%);
 }
 .container .error {
   position: relative;
@@ -805,13 +805,14 @@ body {
     width: 100%;
     height: auto;
     grid-template-columns: 100%;
+    gap: 10px;
     grid-template-areas: "results" "cards";
   }
   .container .search-results {
     grid-area: results;
   }
   .container .beer {
-    grid-area: beer;
+    grid-area: cards;
     grid-column: 1/1;
     margin-top: -50px;
     margin-bottom: 50px;
@@ -873,8 +874,7 @@ body {
 .search-results {
   display: block;
   position: relative;
-  width: 300px;
-  max-height: 800px;
+  height: 800px;
   top: -90px;
   background-color: #f28705;
   border-radius: 0 0 50px 0px;
@@ -889,6 +889,9 @@ body {
 }
 .search-results .results .preview {
   padding: 10px;
+  border-block-start: 5px solid;
+  border-image-source: linear-gradient(90deg, #2c2a2b, #f28705);
+  border-image-slice: 1;
 }
 .search-results .results .preview .preview__link {
   color: #2c2a2b;

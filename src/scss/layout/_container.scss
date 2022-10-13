@@ -7,7 +7,7 @@
   }
 
   display: grid;
-  grid-template-columns: minmax(265px, max-content) minmax(min-content, 90%);
+  grid-template-columns: minmax(300px, max-content) minmax(min-content, 90%);
 
   .search-results {
     grid-column: 1/2;
@@ -23,6 +23,7 @@
     width: 100%;
     height: auto;
     grid-template-columns: 100%;
+    gap: 10px;
     grid-template-areas:
       "results"
       "cards";
@@ -32,7 +33,7 @@
     }
 
     .beer {
-      grid-area: beer;
+      grid-area: cards;
       grid-column: 1/1;
       margin-top: -50px;
       margin-bottom: 50px;

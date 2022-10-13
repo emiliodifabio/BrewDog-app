@@ -2,8 +2,16 @@ import View from "./View.js";
 
 class ResultsView extends View {
   _parentEl = document.querySelector(".results");
+  _link = document.querySelector(".preview__link");
+  _cards = document.querySelector(".beer");
   _searchW = document.querySelector(".search-results");
   _errorMessage = "⚠️ No beers found for your query. Please try again!";
+
+  scrollToCards() {
+
+      this._cards.scrollIntoView({ behavior: "smooth" });
+    
+  }
 
   _generateMarkup() {
     return `

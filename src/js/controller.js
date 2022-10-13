@@ -6,6 +6,7 @@ import * as model from "./module.js";
 import recipeView from "./views/recipeView.js";
 import searchView from "./views/searchView.js";
 import resultsView from "./views/resultsView.js";
+import paginationView from "./views/paginationView.js";
 
 // PREVENT PAGE RELOAD WHEN RESULTS LIST IS SHOWING
 if (module.hot) {
@@ -18,16 +19,14 @@ const controlRecipes = async function () {
     const id = window.location.hash.slice(1);
 
     if (!id) return;
-    console.log(id);
     recipeView.renderSpinner();
+    resultsView.scrollToCards();
 
     // Loading recipe
     await model.loadRecipe(id);
-    console.log(id);
 
     // Rendering recipe
     recipeView.render(model.state.recipe);
-    console.log(recipeView);
   } catch (error) {
     recipeView.renderError();
   }
@@ -48,17 +47,30 @@ const controlSearchResults = async function () {
 
     // 3) Render results
     resultsView.removeHidden();
-    resultsView.render(model.state.search.results);
+    // resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPage());
 
+    // 4) Render initial pagination buttons
+    paginationView.render(model.state.search);
   } catch (error) {
     resultsView.renderError();
   }
 };
 
+const controlPagination = function (goToPage) {
+  // 1) Render NEW results
+  // resultsView.render(model.state.search.results);
+  resultsView.render(model.getSearchResultsPage(goToPage));
+  paginationView.scrollToResult();
+
+  // 2) Render NEW pagination buttons
+  paginationView.render(model.state.search);
+};
 const init = function () {
   // WHEN CALL LOAD AND SHOW FUNCTIONS
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
 };
 init();
 

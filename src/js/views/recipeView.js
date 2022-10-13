@@ -8,7 +8,7 @@ class RecipeView extends View {
   addHandlerRender(handler) {
     // al cambio di hash dell'url o al caricamento della pagina con lo stesso hash, mostra la ricetta
     ["hashchange", "load"].forEach((ev) =>
-      window.addEventListener(ev, handler)
+    window.addEventListener(ev, handler)
     );
   }
 

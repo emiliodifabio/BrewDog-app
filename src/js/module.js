@@ -1,5 +1,5 @@
 // import { async } from "regenerator-runtime";
-import { AFTER, API_URL, BEFORE } from "./config.js";
+import { AFTER, API_URL, BEFORE, RES_PER_PAGE } from "./config.js";
 import { getJSON } from "./helpers.js";
 
 export const state = {
@@ -7,6 +7,8 @@ export const state = {
   search: {
     query: "",
     results: [],
+    page: 1,
+    resultsPerPage: RES_PER_PAGE,
   },
 };
 
@@ -69,22 +71,19 @@ export const loadRecipe = async function (id) {
 export const loadSearchResults = async function (query) {
   try {
     state.search.query = query;
-    const [data1, data2, data3, data4, data5] = await Promise.all(
-      [ 
-      getJSON(`${API_URL}beer_name=${query.replace(" ", "_")}`), 
+    const [data1, data2, data3, data4, data5] = await Promise.all([
+      getJSON(`${API_URL}beer_name=${query.replace(" ", "_")}`),
       getJSON(`${API_URL}malt=${query.replace(" ", "_")}`),
-      getJSON(`${API_URL}yeast=${query.replace(" ", "_")}`), 
-      getJSON(`${API_URL}brewed_after=${AFTER}-${query}&brewed_before=${BEFORE}-${query}`), 
-      getJSON(`${API_URL}hops=${query.replace(" ", "_")}`)
+      getJSON(`${API_URL}yeast=${query.replace(" ", "_")}`),
+      getJSON(
+        `${API_URL}brewed_after=${AFTER}-${query}&brewed_before=${BEFORE}-${query}`
+      ),
+      getJSON(`${API_URL}hops=${query.replace(" ", "_")}`),
     ]);
     const data = [...data1, ...data2, ...data3, ...data4, ...data5];
-    
+
     // const data = await getJSON(
-        // `${API_URL}beer_name=${query.replace(" ", "_")}`
-    // && `${API_URL}malt=${query.replace(" ", "_")}`
-    //  && `${API_URL}yeast=${query.replace(" ", "_")}`
-      // && `${API_URL}brewed_after=${AFTER}-${query}&brewed_before=${BEFORE}-${query}`
-    //  && `${API_URL}hops=${query.replace(" ", "_")}`
+    //   `${API_URL}page=1&per_page=10&beer_name=${query.replace(" ", "_")}`
     // );
     console.log(data);
     state.search.results = data.map((recipe) => {
@@ -102,3 +101,9 @@ export const loadSearchResults = async function (query) {
   }
 };
 
+export const getSearchResultsPage = function (page = state.search.page) {
+  state.search.page = page;
+  const start = (page - 1) * state.search.resultsPerPage; // 0;
+  const end = page * state.search.resultsPerPage; // 9;
+  return state.search.results.slice(start, end);
+};
