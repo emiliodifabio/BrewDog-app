@@ -2,34 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bewery App</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" defer src="src/js/controller.js"></script>
   </head>
-<body>
-  <header class="header">
-    <img src="/src/img/logo_brewey_app.png" alt="logo" class="header__logo" />
-    <form class="search">
-      <input
-      type="text"
-      class="search__field"
-      placeholder="Search by over 300 BrewDog beers"
-      />
-      <button class="btn search__btn">
-        <svg class="search__icon">
-          <use href="/src/img/icons.svg#icon-search"></use>
-        </svg>
-      </button>
-    </form>
-  </header>
-   <main>
+  <body>
+    <header class="header">
+      <img src="/src/img/logo_brewey_app.png" alt="logo" class="header__logo" />
+      <form class="search">
+        <input
+          type="text"
+          class="search__field"
+          placeholder="Search by over 300 BrewDog beers"
+        />
+        <button class="btn search__btn">
+          <svg class="search__icon">
+            <use href="/src/img/icons.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <main>
       <div class="container">
         <!-- <div class="spinner"></div> -->
-       <section class="search-results hidden">
-           <ul class="results">
-           <!-- <li class="preview">
+        <section class="search-results hidden">
+          <ul class="results">
+            <!-- <li class="preview">
               <a class="preview__link" href="#">
                 <div class="preview__data">
                   <h5 class="preview__title">Electric India</h5>
@@ -111,7 +114,7 @@
                 </div>
               </a>
             </li> -->
-          </ul> 
+          </ul>
           <div class="pagination">
             <!-- <button data-goto="2" class="btn--inline pagination__btn--next">
               <p>Page 2 >></p>
@@ -119,9 +122,12 @@
           </div>
         </section>
         <section class="beer">
-               <div class="message">
-                  <h4>Start by searching for a beer, ingredient (malt, hops, yeast), first brewed's year. Have fun!</h4>
-               </div>
+          <div class="message">
+            <h4>
+              Start by searching for a beer, ingredient (malt, hops, yeast),
+              first brewed's year. Have fun!
+            </h4>
+          </div>
           <!-- <div class="error">
                    <h4>No beers found for your query. Please try again!</h4>
                </div> -->
@@ -289,22 +295,29 @@
             </div>
           </div> -->
         </section>
-    </div>
-   </main>
-        <footer class="footer">
-            Created with
-             <a href="https://github.com/sammdec/punkapi" target="_blank" 
-                rel="noopener noreferrer" >
-                PunkAPI
-             </a> 
-                by Emilio Di Fabio
-             <a href="https://github.com/emiliodifabio" target="_blank"
-                rel="noopener noreferrer">
-                <img
-                   class="logo_github"
-                   src="/src/img/logo_github.png"
-                   alt="Logo GitHub"/>
-              </a>
-         </footer>
+      </div>
+    </main>
+    <footer class="footer">
+      Created with
+      <a
+        href="https://github.com/sammdec/punkapi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        PunkAPI
+      </a>
+      by Emilio Di Fabio
+      <a
+        href="https://github.com/emiliodifabio"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="logo_github"
+          src="/src/img/logo_github.png"
+          alt="Logo GitHub"
+        />
+      </a>
+    </footer>
   </body>
 </html>
