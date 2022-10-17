@@ -140,6 +140,30 @@ button {
   cursor: pointer;
 }
 
+button::before {
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
+  background: radial-gradient(circle at 17% 25%, transparent 0, transparent 6px, #fff 7px, #fff 8px, transparent 8px), radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, #fff 3px, #fff 4px, transparent 4px), radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, #fff 3px, #fff 4px, transparent 4px), radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, #fff 5px, #fff 6px, transparent 6px);
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+form {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
 form .search__btn {
   display: block;
   position: relative;
@@ -148,14 +172,31 @@ form .search__btn {
   border: none;
   border-radius: 50px;
   background-color: #bf4904;
+  outline: thin double #bf4904;
+  outline-style: inset;
+  outline-width: 4px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 form .search__btn .search__icon {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 13px;
+  left: 15px;
   width: 25px;
   height: 25px;
   fill: #fff;
+}
+
+form::before {
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
+  background: radial-gradient(circle at 17% 25%, transparent 0, transparent 6px, #fff 7px, #fff 8px, transparent 8px), radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, #fff 3px, #fff 4px, transparent 4px), radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, #fff 3px, #fff 4px, transparent 4px), radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, #fff 5px, #fff 6px, transparent 6px);
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
 }
 
 .pagination {
@@ -181,6 +222,7 @@ form .search__btn .search__icon {
   width: 50px;
   height: auto;
   border-radius: 50px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar {
@@ -196,16 +238,12 @@ form .search__btn .search__icon {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f29f05;
+  background: #2c2a2b;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #bf4904;
-}
-
-::-webkit-scrollbar-corner {
-  border-radius: 50px;
+  background: #2c2a2b;
 }
 
 .header .search {
@@ -216,6 +254,9 @@ form .search__btn .search__icon {
   text-align: center;
   background-color: #f28705;
   border-radius: 50px;
+  outline: thin double #bf4904;
+  outline-style: inset;
+  outline-width: 4px;
 }
 .header .search input:focus {
   color: #fff;
@@ -223,7 +264,7 @@ form .search__btn .search__icon {
 }
 .header .search input::placeholder {
   color: #fff;
-  opacity: 50%;
+  opacity: 80%;
 }
 .header .search__field {
   width: 85%;
@@ -357,6 +398,7 @@ form .search__btn .search__icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   z-index: -2;
 }
 .beer .beer-info .beer-info-flex .beer-info__tagline {
@@ -434,8 +476,8 @@ form .search__btn .search__icon {
   border-radius: 50px;
   width: 300px;
   height: 300px;
-  grid-area: basics;
   text-align: left;
+  grid-area: basics;
 }
 .beer .cards-w .cards__basics .cards__basics--title {
   font-weight: 800;
@@ -446,12 +488,13 @@ form .search__btn .search__icon {
 .beer .cards-w .cards__basics .cards__basics--unit-details-w {
   flex-direction: column;
   text-align: left;
-  margin: 20px 40px;
+  margin: 20px 0px 20px 40px;
 }
 .beer .cards-w .cards__basics .cards__basics--unit-details-w .cards__basics--unit-details {
   font-weight: 600;
   text-transform: uppercase;
   padding: 3px 0;
+  width: 150px;
 }
 .beer .cards-w .cards__basics .cards__basics--unit-EU-w {
   flex-direction: column;
@@ -494,6 +537,7 @@ form .search__btn .search__icon {
   font-weight: 600;
   text-transform: uppercase;
   padding: 3px 0;
+  width: 150px;
 }
 .beer .cards-w .cards__method .cards__method--unit-EU-w {
   flex-direction: column;
@@ -520,8 +564,8 @@ form .search__btn .search__icon {
   border-radius: 50px;
   width: 300px;
   height: 615px;
-  grid-area: ingredients;
   text-align: center;
+  grid-area: ingredients;
 }
 .beer .cards-w .cards__ingredients .cards__ingredients--title {
   font-weight: 800;
@@ -545,6 +589,7 @@ form .search__btn .search__icon {
   font-weight: 600;
   text-transform: uppercase;
   padding: 3px 0;
+  width: 150px;
 }
 .beer .cards-w .cards__ingredients .cards__ingredients--malt-unit-EU-w {
   flex-direction: column;
@@ -580,6 +625,7 @@ form .search__btn .search__icon {
   font-weight: 600;
   text-transform: uppercase;
   padding: 3px 0;
+  width: 150px;
 }
 .beer .cards-w .cards__ingredients .cards__ingredients--hops-unit-w {
   flex-direction: column;
@@ -655,7 +701,7 @@ form .search__btn .search__icon {
   margin-bottom: 10px;
 }
 .beer .cards-w .cards__image {
-  background-color: #f29f05;
+  background-color: #bf4904;
   border-radius: 50px;
   width: 300px;
   height: 615px;
@@ -665,7 +711,8 @@ form .search__btn .search__icon {
   grid-area: image;
 }
 .beer .cards-w .cards__image .cards__image--img {
-  max-height: 610px;
+  max-height: 605px;
+  max-width: 280px;
 }
 .beer .cards-w .cards__tip > div {
   display: inline-flex;
@@ -691,7 +738,7 @@ form .search__btn .search__icon {
   margin-bottom: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1285px) {
   .beer .beer-info .beer-info-flex .beer-info--abv-ibu-og-w {
     display: none;
   }
@@ -704,6 +751,12 @@ form .search__btn .search__icon {
   }
 }
 @media (max-width: 960px) {
+  .beer .beer-info {
+    text-align: center;
+  }
+  .beer .beer-info .beer-info-flex .beer-info__tagline {
+    width: 100%;
+  }
   .beer .cards-w {
     grid-template-columns: 300px;
     grid-template-areas: "image" "description" "ingredients" "basics" "method" "food" "tip";
@@ -763,9 +816,6 @@ form .search__btn .search__icon {
     padding: 0px 20px;
     margin-top: 20px;
   }
-  .beer .cards-w .cards__basics .cards__basics--unit-details-w {
-    margin: 20px 40px;
-  }
 }
 @media (max-width: 400px) {
   .beer .message {
@@ -783,7 +833,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(300px, max-content) minmax(min-content, 90%);
+  grid-template-columns: 300px minmax(min-content, 100%);
 }
 .container .error {
   position: relative;
@@ -815,7 +865,6 @@ body {
     grid-area: cards;
     grid-column: 1/1;
     margin-top: -50px;
-    margin-bottom: 50px;
   }
 }
 @media (max-width: 500px) {
@@ -874,11 +923,11 @@ body {
 .search-results {
   display: block;
   position: relative;
-  height: 800px;
+  height: fit-content;
   top: -90px;
+  padding-bottom: 80px;
   background-color: #f28705;
   border-radius: 0 0 50px 0px;
-  overflow-y: auto;
   z-index: 0;
 }
 .search-results .results {

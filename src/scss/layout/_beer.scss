@@ -81,8 +81,8 @@
     .cards__basics {
       @include mixins.cards-bg;
       @include mixins.card-medium;
-      grid-area: basics;
       text-align: left;
+      grid-area: basics;
 
       .cards__basics--title {
         @include mixins.cards-title;
@@ -156,8 +156,8 @@
     .cards__ingredients {
       @include mixins.cards-bg;
       @include mixins.card-large;
-      grid-area: ingredients;
       text-align: center;
+      grid-area: ingredients;
 
       .cards__ingredients--title {
         @include mixins.cards-title;
@@ -271,15 +271,12 @@
       }
     }
     .cards__image {
-      @include mixins.cards-bg;
+      @include mixins.cards-bg-image;
       @include mixins.card-large;
-      display: grid;
-      position: relative;
-      place-content: center;
-      grid-area: image;
+      @include mixins.card-image;
 
       .cards__image--img {
-        max-height: 610px;
+        @include mixins.card-image-size;
       }
     }
     .cards__tip > div {
@@ -303,7 +300,8 @@
   }
 }
 
-@media (max-width: 1200px) {
+// MEDIA QUERY
+@media (max-width: 1285px) {
   .beer {
     .beer-info {
       .beer-info-flex {
@@ -314,11 +312,11 @@
     }
 
     .cards-w {
-      @include mixins.cards-w-1200;
+      @include mixins.cards-w-1285;
 
       .cards__method {
         .cards__method--details-w {
-          @include mixins.cards-details-method-w-1200;
+          @include mixins.cards-details-method-w-1285;
         }
       }
     }
@@ -327,6 +325,14 @@
 
 @media (max-width: 960px) {
   .beer {
+    .beer-info {
+      @include mixins.beer-info-960;
+      .beer-info-flex {
+        .beer-info__tagline {
+          width: 100%;
+        }
+      }
+    }
     .cards-w {
       @include mixins.cards-w-960;
 
@@ -360,7 +366,6 @@
   }
 }
 
-// MEDIA QUERY
 @media (max-width: 768px) {
   .beer {
     .message {
@@ -372,6 +377,7 @@
     }
     .beer-info {
       text-align: center;
+
       .beer-info-flex {
         justify-content: center;
       }
@@ -399,11 +405,6 @@
       .cards__ingredients {
         .cards__ingredients--malt-title {
           @include mixins.cards-ingredients-malt-title-500;
-        }
-      }
-      .cards__basics {
-        .cards__basics--unit-details-w {
-          @include mixins.cards-details-w-500;
         }
       }
     }

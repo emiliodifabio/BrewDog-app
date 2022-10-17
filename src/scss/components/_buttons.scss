@@ -5,7 +5,14 @@ button {
   cursor: pointer;
 }
 
+button::before {
+  @include mixins.bubbles;
+}
+
+@include mixins.keyframes-bubbles;
+
 form {
+  @include mixins.box-shadow;
   .search__btn {
     display: block;
     position: relative;
@@ -14,16 +21,24 @@ form {
     border: variables.$reset-border;
     border-radius: variables.$border-radius;
     background-color: variables.$btn-search-color;
+    outline: thin double variables.$tertiary-color;
+    outline-style: inset;
+    outline-width: 4px;
+    @include mixins.box-shadow;
 
     .search__icon {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 13px;
+      left: 15px;
       width: 25px;
       height: 25px;
       fill: variables.$icon-color;
     }
   }
+}
+
+form::before {
+  @include mixins.bubbles;
 }
 
 .pagination {

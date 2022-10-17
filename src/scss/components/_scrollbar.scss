@@ -14,14 +14,10 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: variables.$primary-color;
+  background: variables.$dark-color;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: variables.$tertiary-color;
-}
-
-::-webkit-scrollbar-corner {
-  border-radius: 50px;
+  background: variables.$dark-color;
 }

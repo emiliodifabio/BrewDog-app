@@ -10,6 +10,10 @@
     text-align: center;
     background-color: variables.$secondary-color;
     border-radius: 50px;
+    outline: thin double variables.$tertiary-color;
+    outline-style: inset;
+    outline-width: 4px;
+    
 
     input:focus {
       color: variables.$light-color;
@@ -18,9 +22,10 @@
 
     input::placeholder {
       color: variables.$light-color;
-      opacity: 50%;
+      opacity: 80%;
     }
   }
+
   .search__field {
     width: 85%;
     height: auto;

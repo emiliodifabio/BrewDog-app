@@ -7,8 +7,7 @@
   }
 
   display: grid;
-  grid-template-columns: minmax(300px, max-content) minmax(min-content, 90%);
-
+  grid-template-columns: 300px minmax(min-content, 100%);
   .search-results {
     grid-column: 1/2;
   }
@@ -36,7 +35,6 @@
       grid-area: cards;
       grid-column: 1/1;
       margin-top: -50px;
-      margin-bottom: 50px;
     }
   }
 }
