@@ -151,13 +151,6 @@ button::before {
   left: 0;
   position: absolute;
   animation: bubbles 5s linear infinite both;
-  content: "";
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  border-radius: 51px;
 }
 
 @keyframes bubbles {
@@ -169,6 +162,7 @@ button::before {
   }
 }
 form {
+  position: relative;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 form .search__btn {
@@ -204,6 +198,17 @@ form::before {
   left: 0;
   position: absolute;
   animation: bubbles 5s linear infinite both;
+}
+
+form::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border: 2px solid red;
+  border-radius: 51px;
 }
 
 .pagination {
