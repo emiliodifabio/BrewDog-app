@@ -248,6 +248,7 @@ form::before {
 
 .header .search {
   display: flex;
+  position: relative;
   width: 500px;
   height: auto;
   justify-content: space-between;
@@ -273,6 +274,16 @@ form::before {
   background-color: #f28705;
   border-radius: 50px;
   padding: 0 25px;
+}
+
+.header .search:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
 }
 
 @media (max-width: 1200px) {
