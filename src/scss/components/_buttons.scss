@@ -22,9 +22,9 @@ form {
     border: variables.$reset-border;
     border-radius: variables.$border-radius;
     background-color: variables.$btn-search-color;
-    outline-color: variables.$tertiary-color;
-    outline-style: inset;
-    outline-width: 4px;
+    // outline-color: variables.$tertiary-color;
+    // outline-style: inset;
+    // outline-width: 4px;
     @include mixins.box-shadow;
 
     .search__icon {
@@ -38,6 +38,19 @@ form {
   }
 }
 
+form {
+  .search__btn::after {
+    content: "";
+    position: absolute;
+    top: -4px; // outline-width: 4px;
+    right: -4px; // outline-width: 4px;
+    bottom: -4px; // outline-width: 4px;
+    left: -4px; // outline-width: 4px;
+    border: 4px inset variables.$tertiary-color;
+    border-radius: 50px;
+  }
+}
+
 form::before {
   @include mixins.bubbles;
 }
@@ -45,12 +58,12 @@ form::before {
 form::after {
   content: "";
   position: absolute;
-  top: -4px; // border: 2px + offset: 1px
-  right: -4px; // border: 2px + offset: 1px
-  bottom: -4px; // border: 2px + offset: 1px
-  left: -4px; // border: 2px + offset: 1px
+  top: -4px; // outline-width: 4px;
+  right: -4px; // outline-width: 4px;
+  bottom: -4px; // outline-width: 4px;
+  left: -4px; // outline-width: 4px;
   border: 4px inset variables.$tertiary-color;
-  border-radius: 50px; // border—radius: 6px + offset: 1px
+  border-radius: 50px;
 }
 
 .pagination {

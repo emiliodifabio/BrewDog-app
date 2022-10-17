@@ -173,9 +173,6 @@ form .search__btn {
   border: none;
   border-radius: 50px;
   background-color: #bf4904;
-  outline-color: #bf4904;
-  outline-style: inset;
-  outline-width: 4px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 form .search__btn .search__icon {
@@ -185,6 +182,17 @@ form .search__btn .search__icon {
   width: 25px;
   height: 25px;
   fill: #fff;
+}
+
+form .search__btn::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 4px inset #bf4904;
+  border-radius: 50px;
 }
 
 form::before {
