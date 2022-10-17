@@ -49,10 +49,8 @@ form::after {
   right: -3px; // border: 2px + offset: 1px
   bottom: -3px; // border: 2px + offset: 1px
   left: -3px; // border: 2px + offset: 1px
-  outline-color: variables.$tertiary-color;
-  outline-style: inset;
-  outline-width: 4px;
-  border-radius: 51px; // border—radius: 6px + offset: 1px
+  border: 2px solid red;
+  border-radius: 50px; // border—radius: 6px + offset: 1px
 }
 
 .pagination {
