@@ -49,7 +49,7 @@ form::after {
   right: -3px; // border: 2px + offset: 1px
   bottom: -3px; // border: 2px + offset: 1px
   left: -3px; // border: 2px + offset: 1px
-  border: 2px solid red;
+  border: 4px inset variables.$tertiary-color;
   border-radius: 50px; // border—radius: 6px + offset: 1px
 }
 
