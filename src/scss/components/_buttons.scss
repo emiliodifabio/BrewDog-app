@@ -39,7 +39,7 @@ form {
 }
 
 form {
-  .search__btn::after {
+  .search__btn::before {
     content: "";
     position: absolute;
     top: -4px; // outline-width: 4px;

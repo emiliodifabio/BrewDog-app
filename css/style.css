@@ -184,7 +184,7 @@ form .search__btn .search__icon {
   fill: #fff;
 }
 
-form .search__btn::after {
+form .search__btn::before {
   content: "";
   position: absolute;
   top: -4px;
