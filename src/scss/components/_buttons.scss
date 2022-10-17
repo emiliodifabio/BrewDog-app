@@ -21,7 +21,7 @@ form {
     border: variables.$reset-border;
     border-radius: variables.$border-radius;
     background-color: variables.$btn-search-color;
-    outline: thin double variables.$tertiary-color;
+    outline-color: variables.$tertiary-color;
     outline-style: inset;
     outline-width: 4px;
     @include mixins.box-shadow;
