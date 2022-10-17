@@ -14,6 +14,7 @@ button::before {
 form {
   position: relative;
   @include mixins.box-shadow;
+
   .search__btn {
     display: block;
     position: relative;
@@ -38,8 +39,12 @@ form {
   }
 }
 
+form::after {
+  @include mixins.bubbles;
+}
+
 form {
-  .search__btn::before {
+  .search__btn::after {
     content: "";
     position: absolute;
     top: -4px; // outline-width: 4px;
@@ -49,21 +54,6 @@ form {
     border: 4px inset variables.$tertiary-color;
     border-radius: 50px;
   }
-}
-
-form::before {
-  @include mixins.bubbles;
-}
-
-form::after {
-  content: "";
-  position: absolute;
-  top: -4px; // outline-width: 4px;
-  right: -4px; // outline-width: 4px;
-  bottom: -4px; // outline-width: 4px;
-  left: -4px; // outline-width: 4px;
-  border: 4px inset variables.$tertiary-color;
-  border-radius: 50px;
 }
 
 .pagination {

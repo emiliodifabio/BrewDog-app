@@ -184,18 +184,7 @@ form .search__btn .search__icon {
   fill: #fff;
 }
 
-form .search__btn::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  bottom: -4px;
-  left: -4px;
-  border: 4px inset #bf4904;
-  border-radius: 50px;
-}
-
-form::before {
+form::after {
   content: "";
   pointer-events: none;
   opacity: 0.6;
@@ -208,7 +197,7 @@ form::before {
   animation: bubbles 5s linear infinite both;
 }
 
-form::after {
+form .search__btn::after {
   content: "";
   position: absolute;
   top: -4px;
@@ -296,11 +285,13 @@ form::after {
 .header .search::before {
   content: "";
   position: absolute;
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  border-radius: 51px;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 4px inset #bf4904;
+  border-radius: 50px;
+  z-index: -1;
 }
 
 @media (max-width: 1200px) {
