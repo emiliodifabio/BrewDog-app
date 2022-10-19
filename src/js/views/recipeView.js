@@ -212,8 +212,7 @@ class RecipeView extends View {
                   ${this._data.tip}
                 </p>
               </div>
-            </div>
-            ;`
+            </div>`
   }
 }
 export default new RecipeView();

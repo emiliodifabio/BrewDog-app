@@ -381,15 +381,14 @@ form .search__btn::after {
 .beer {
   display: grid;
   position: relative;
-  width: 100%;
+  width: 95%;
   height: auto;
-  margin-top: 20px;
-  place-content: center;
+  margin: 20px auto;
 }
 .beer .message {
   display: grid;
   position: relative;
-  width: min(100% - 20px, 750px);
+  width: min(100% - 20px, 600px);
   height: auto;
   margin-inline: auto;
   color: #fff;
@@ -861,12 +860,11 @@ body {
   width: 100%;
   height: auto;
   grid-template-columns: 300px minmax(min-content, 100%);
-  gap: 10px;
 }
 .container .error {
   display: grid;
   position: relative;
-  width: min(100% - 20px, 750px);
+  width: min(100% - 20px, 600px);
   height: auto;
   margin-inline: auto;
   color: #fff;
