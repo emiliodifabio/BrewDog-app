@@ -989,7 +989,7 @@ body {
   .search-results {
     width: 100%;
   }
-  .search-results .results has:not(.error) {
+  .search-results .results > :not(.error) {
     text-align: center;
   }
 }

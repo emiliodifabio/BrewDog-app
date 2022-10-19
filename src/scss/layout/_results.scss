@@ -62,12 +62,8 @@
   .search-results {
     width: 100%;
 
-    .results has:not(.error) {
+    .results > :not(.error) {
       text-align: center;
-
-      // .error {
-      //   // width: 100%;
-      // }
     }
   }
 }
