@@ -1,0 +1,63 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+
+.container {
+    .search-results {
+        .results {
+            .error {
+                .icon-error {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+.beer {
+  .message {
+    h3 {
+      .icon-beer {
+        position: relative;
+        bottom: -3px;
+      }
+      .icon-yeast {
+        position: relative;
+        bottom: -5px;
+      }
+      .icon-food {
+        position: relative;
+        bottom: 3px;
+      }
+      .icon-year {
+        position: relative;
+        bottom: 2px;
+      }
+    }
+
+    h1 {
+      padding: 55px 0;
+      .icon-fun {
+        position: relative;
+        bottom: 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .beer {
+    .message {
+      h3 {
+        .icon-beer {
+          bottom: -2px;
+        }
+        .icon-yeast {
+          bottom: -4px;
+        }
+        .icon-food {
+          bottom: 1px;
+        }
+      }
+    }
+  }
+}

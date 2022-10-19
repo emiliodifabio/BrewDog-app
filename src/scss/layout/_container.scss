@@ -7,7 +7,13 @@
   }
 
   display: grid;
+  position: relative;
+  width: 100%;
+  height: auto;
   grid-template-columns: 300px minmax(min-content, 100%);
+  gap: 10px;
+  
+
   .search-results {
     grid-column: 1/2;
   }
@@ -22,7 +28,6 @@
     width: 100%;
     height: auto;
     grid-template-columns: 100%;
-    gap: 10px;
     grid-template-areas:
       "results"
       "cards";
@@ -34,23 +39,22 @@
     .beer {
       grid-area: cards;
       grid-column: 1/1;
-      margin-top: -50px;
     }
   }
 }
 
-@media (max-width: 500px) {
-  .container {
-    .error {
-      @include mixins.beer-message-500;
-    }
-  }
-}
+// @media (max-width: 500px) {
+//   .container {
+//     .error {
+//       @include mixins.beer-message-500;
+//     }
+//   }
+// }
 
-@media (max-width: 400px) {
-  .container {
-    .error {
-      @include mixins.beer-message-400;
-    }
-  }
-}
+// @media (max-width: 400px) {
+//   .container {
+//     .error {
+//       @include mixins.beer-message-400;
+//     }
+//   }
+// }

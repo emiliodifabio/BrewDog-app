@@ -23,7 +23,7 @@ class PaginationView extends View {
       this._data.results.length / this._data.resultsPerPage
     );
 
-    if (undefined) return;
+    if(this._data.results.length === 0) return "";
 
     // Page 1, and there are other pages
     if (currPage === 1 && numPages > 1) {

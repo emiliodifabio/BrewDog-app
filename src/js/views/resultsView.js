@@ -5,7 +5,7 @@ class ResultsView extends View {
   _link = document.querySelector(".preview__link");
   _cards = document.querySelector(".beer");
   _searchW = document.querySelector(".search-results");
-  _errorMessage = "⚠️ No beers found for your query. Please try again!";
+  _errorMessage = `<div class='icon-error'>⚠️</div> <h4>No beers found for your query. Please try again!</h4>`;
 
   scrollToCards() {
 

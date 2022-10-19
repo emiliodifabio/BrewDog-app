@@ -13,7 +13,6 @@
 }
 
 // EFFECTS
-
 @mixin box-shadow {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
@@ -74,36 +73,48 @@
   }
 }
 
+// CONTAINER
+@mixin results-message-error {
+  display: flex;
+  color: variables.$light-color;
+  width: min(100% - 80px, 300px);
+  margin-inline: auto;
+  top: 50px;
+  gap: 10px;
+}
+
 // BEER
 @mixin beer-grid {
+  display: grid;
   position: relative;
-  width: 90%;
-  min-height: 100vh;
-  margin: 20px auto 0;
+  width: 100%;
+  // min-height: 100vh;
+  height: auto;
+  margin-top: 20px;
+  place-content: center;
 }
 
 @mixin beer-message {
+  display: grid;
   position: relative;
-  width: 60%;
+  width: min(100% - 20px, 750px);
   height: auto;
+  margin-inline: auto;
   color: variables.$light-color;
-  margin: 80px auto 0;
-  padding: 50px;
+  place-items: center;
 }
 
-@mixin beer-message-768 {
-  width: 80%;
-  padding: 80px;
-}
+// @mixin beer-message-768 {
+//   left: 0;
+// }
 
-@mixin beer-message-500 {
-  width: 100%;
-}
+// @mixin beer-message-500 {
 
-@mixin beer-message-400 {
-  margin-top: 120px;
-  padding: 30px;
-}
+// }
+
+// @mixin beer-message-400 {
+// // padding: 0 15px;
+// }
 
 @mixin spinner {
   .spinner {

@@ -7,6 +7,13 @@
   .message {
     @include mixins.beer-message;
     z-index: 0;
+
+    ul {
+      margin: 10px auto;
+    li {
+      margin-top: 30px;
+    }
+  }
   }
 
   .beer-info {
@@ -368,13 +375,13 @@
 
 @media (max-width: 768px) {
   .beer {
-    .message {
-      @include mixins.beer-message-768;
-    }
+    // .message {
+    //   @include mixins.beer-message-768;
+    // }
 
-    .error {
-      @include mixins.beer-message-768;
-    }
+    // .error {
+    //   @include mixins.beer-message-768;
+    // }
     .beer-info {
       text-align: center;
 
@@ -387,9 +394,9 @@
 
 @media (max-width: 500px) {
   .beer {
-    .message {
-      @include mixins.beer-message-500;
-    }
+    // .message {
+    //   @include mixins.beer-message-500;
+    // }
 
     .beer-info {
       .beer-info__name {
@@ -411,14 +418,14 @@
   }
 }
 
-@media (max-width: 400px) {
-  .beer {
-    .message {
-      @include mixins.beer-message-400;
-    }
+// @media (max-width: 400px) {
+//   .beer {
+//     .message {
+//       @include mixins.beer-message-400;
+//     }
 
-    .error {
-      @include mixins.beer-message-400;
-    }
-  }
-}
+//     .error {
+//       @include mixins.beer-message-400;
+//     }
+//   }
+// }

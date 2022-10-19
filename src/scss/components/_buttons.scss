@@ -24,6 +24,7 @@ form {
     border-radius: variables.$border-radius;
     background-color: variables.$btn-search-color;
     @include mixins.box-shadow;
+    z-index: 10;
 
     .search__icon {
       position: absolute;

@@ -2,33 +2,35 @@
 @use "../abstract/mixins";
 
 .search-results {
-  
   display: block;
   position: relative;
   height: fit-content;
   top: -90px;
-  padding-bottom: 80px;
+  padding: 100px 0;
   background-color: variables.$results-bg-color;
   border-radius: variables.$border-radius-results;
   z-index: 0;
-  
+
   .results {
-    margin: 100px 0 0 0;
-    
+    margin-bottom: 10px;
+
     .error {
-      width: 100%;
+      @include mixins.results-message-error;
     }
-    
+
     .preview {
       padding: 10px;
       border-block-start: 5px solid;
-      border-image-source: linear-gradient(90deg, variables.$dark-color, variables.$secondary-color);
+      border-image-source: linear-gradient(
+        90deg,
+        variables.$dark-color,
+        variables.$secondary-color
+      );
       border-image-slice: 1;
-      
-      
+
       .preview__link {
         color: variables.$dark-color;
-        
+
         .preview__data {
           .preview__malt {
             font-style: italic;
@@ -36,15 +38,14 @@
         }
       }
     }
-    
+
     .selected {
       background-color: variables.$primary-color;
     }
-    
+
     .preview:hover {
       background-color: variables.$primary-color;
       transition: all 0.3s;
-      
     }
     .preview:focus {
       background-color: variables.$primary-color;
@@ -61,8 +62,12 @@
   .search-results {
     width: 100%;
 
-    .results {
+    .results has:not(.error) {
       text-align: center;
+
+      // .error {
+      //   // width: 100%;
+      // }
     }
   }
 }
