@@ -8,9 +8,7 @@ class ResultsView extends View {
   _errorMessage = `<div class='icon-error'>⚠️</div> <h4>No beers found for your query. Please try again!</h4>`;
 
   scrollToCards() {
-
       this._cards.scrollIntoView({ behavior: "smooth" });
-    
   }
 
   _generateMarkup() {
