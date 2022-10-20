@@ -849,7 +849,7 @@ form .search__btn::after {
   }
 }
 @media (max-width: 500px) {
-  .beer .message .message--start {
+  .beer .message-shadow .message .message--start {
     width: 65%;
   }
   .beer .beer-info .beer-info__name {
