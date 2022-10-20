@@ -3,17 +3,29 @@
 
 .beer {
   @include mixins.beer-grid;
+  .message-shadow {
+    filter: drop-shadow( 0 0 20px rgba(variables.$primary-color, .3));
+    .message {
+      @include mixins.beer-message;
+      z-index: 0;
 
-  .message {
-    @include mixins.beer-message;
-    z-index: 0;
+      .message--start {
+        width: 70%;
 
-    ul {
-      margin: 10px auto;
-    li {
-      margin-top: 30px;
+        ul {
+          font-size: 1.5rem;
+          margin: 10px auto;
+          li {
+            margin-top: 30px;
+          }
+        }
+      }
+
+      .message--fun {
+        margin-top: 180px;
+        padding: 0 60px;
+      }
     }
-  }
   }
 
   .beer-info {
@@ -375,13 +387,6 @@
 
 @media (max-width: 768px) {
   .beer {
-    // .message {
-    //   @include mixins.beer-message-768;
-    // }
-
-    // .error {
-    //   @include mixins.beer-message-768;
-    // }
     .beer-info {
       text-align: center;
 
@@ -394,6 +399,11 @@
 
 @media (max-width: 500px) {
   .beer {
+    .message {
+      .message--start {
+        width: 65%;
+      }
+    }
 
     .beer-info {
       .beer-info__name {
@@ -414,15 +424,3 @@
     }
   }
 }
-
-// @media (max-width: 400px) {
-//   .beer {
-//     .message {
-//       @include mixins.beer-message-400;
-//     }
-
-//     .error {
-//       @include mixins.beer-message-400;
-//     }
-//   }
-// }

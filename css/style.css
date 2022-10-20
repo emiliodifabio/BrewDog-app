@@ -232,24 +232,21 @@ form .search__btn::after {
   font-size: 32px;
 }
 
-.beer .message h3 .icon-beer {
+.beer .message .message--start .icon-beer {
   position: relative;
-  bottom: -3px;
+  bottom: -2px;
 }
-.beer .message h3 .icon-yeast {
+.beer .message .message--start .icon-yeast {
   position: relative;
   bottom: -5px;
 }
-.beer .message h3 .icon-food {
+.beer .message .message--start .icon-food {
   position: relative;
   bottom: 3px;
 }
-.beer .message h3 .icon-year {
+.beer .message .message--start .icon-year {
   position: relative;
   bottom: 2px;
-}
-.beer .message h1 {
-  padding: 55px 0;
 }
 .beer .message h1 .icon-fun {
   position: relative;
@@ -299,7 +296,6 @@ form .search__btn::after {
   display: flex;
   position: relative;
   width: min(100% - 80px, 500px);
-  margin-inline: auto;
   height: auto;
   justify-content: space-between;
   text-align: center;
@@ -385,21 +381,35 @@ form .search__btn::after {
   height: auto;
   margin: 20px auto;
 }
-.beer .message {
+.beer .message-shadow {
+  filter: drop-shadow(0 0 20px rgba(242, 159, 5, 0.3));
+}
+.beer .message-shadow .message {
   display: grid;
   position: relative;
-  width: min(100% - 20px, 600px);
-  height: auto;
+  width: min(100%, 600px);
   margin-inline: auto;
   color: #fff;
   place-items: center;
+  text-align: center;
+  min-height: 900px;
+  background: linear-gradient(135deg, #f29f05, #bf4904);
+  clip-path: polygon(85% 100%, 70% 75%, 95% 25%, 80% 0%, 20% 0%, 5% 25%, 30% 75%, 15% 100%);
   z-index: 0;
 }
-.beer .message ul {
+.beer .message-shadow .message .message--start {
+  width: 70%;
+}
+.beer .message-shadow .message .message--start ul {
+  font-size: 1.5rem;
   margin: 10px auto;
 }
-.beer .message ul li {
+.beer .message-shadow .message .message--start ul li {
   margin-top: 30px;
+}
+.beer .message-shadow .message .message--fun {
+  margin-top: 180px;
+  padding: 0 60px;
 }
 .beer .beer-info .beer-info__name {
   display: block;
@@ -839,6 +849,9 @@ form .search__btn::after {
   }
 }
 @media (max-width: 500px) {
+  .beer .message .message--start {
+    width: 65%;
+  }
   .beer .beer-info .beer-info__name {
     padding: 3px 20px;
   }
@@ -861,26 +874,17 @@ body {
   height: auto;
   grid-template-columns: 300px minmax(min-content, 100%);
 }
-.container .error {
-  display: grid;
-  position: relative;
-  width: min(100% - 20px, 600px);
-  height: auto;
-  margin-inline: auto;
-  color: #fff;
-  place-items: center;
-}
 .container .search-results {
   grid-column: 1/2;
 }
 .container .beer {
+  width: 90%;
+  height: auto;
   grid-column: 2/3;
 }
 
 @media (max-width: 768px) {
   .container {
-    width: 100%;
-    height: auto;
     grid-template-columns: 100%;
     grid-template-areas: "results" "cards";
   }
@@ -952,7 +956,7 @@ body {
   color: #fff;
   width: min(100% - 80px, 300px);
   margin-inline: auto;
-  top: 50px;
+  margin-top: 60px;
   gap: 10px;
 }
 .search-results .results .preview {

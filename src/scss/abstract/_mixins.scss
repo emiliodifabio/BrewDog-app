@@ -79,7 +79,7 @@
   color: variables.$light-color;
   width: min(100% - 80px, 300px);
   margin-inline: auto;
-  top: 50px;
+  margin-top: 60px;
   gap: 10px;
 }
 
@@ -91,16 +91,34 @@
   height: auto;
   margin: 20px auto;
   // place-content: center;
+  
 }
 
 @mixin beer-message {
   display: grid;
   position: relative;
-  width: min(100% - 20px, 600px);
-  height: auto;
+  width: min(100%, 600px);
   margin-inline: auto;
   color: variables.$light-color;
   place-items: center;
+  text-align: center;
+
+  min-height: 900px;
+    background: linear-gradient(
+      135deg,
+      variables.$primary-color,
+      variables.$tertiary-color
+    );
+    clip-path: polygon(
+      85% 100%,
+      70% 75%,
+      95% 25%,
+      80% 0%,
+      20% 0%,
+      5% 25%,
+      30% 75%,
+      15% 100%
+    );
 }
 
 // @mixin beer-message-768 {

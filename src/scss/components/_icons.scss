@@ -1,24 +1,23 @@
 @use "../abstract/variables";
 @use "../abstract/mixins";
 
-
 .container {
-    .search-results {
-        .results {
-            .error {
-                .icon-error {
-                    font-size: 32px;
-                }
-            }
+  .search-results {
+    .results {
+      .error {
+        .icon-error {
+          font-size: 32px;
         }
+      }
     }
+  }
 }
 .beer {
   .message {
-    h3 {
+    .message--start {
       .icon-beer {
         position: relative;
-        bottom: -3px;
+        bottom: -2px;
       }
       .icon-yeast {
         position: relative;
@@ -35,7 +34,8 @@
     }
 
     h1 {
-      padding: 55px 0;
+      // padding: 55px 0;
+
       .icon-fun {
         position: relative;
         bottom: 3px;
