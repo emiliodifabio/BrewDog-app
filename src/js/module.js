@@ -71,7 +71,7 @@ export const loadRecipe = async function (id) {
 export const loadSearchResults = async function (query) {
   try {
     state.search.query = query;
-    const [data1, data2, data3, data4, data5] = await Promise.all([
+    const [beer, malt, yeast, brewed, hops, food] = await Promise.all([
       getJSON(`${API_URL}beer_name=${query.replace(" ", "_")}`),
       getJSON(`${API_URL}malt=${query.replace(" ", "_")}`),
       getJSON(`${API_URL}yeast=${query.replace(" ", "_")}`),
@@ -79,8 +79,9 @@ export const loadSearchResults = async function (query) {
         `${API_URL}brewed_after=${AFTER}-${query}&brewed_before=${BEFORE}-${query}`
       ),
       getJSON(`${API_URL}hops=${query.replace(" ", "_")}`),
+      getJSON(`${API_URL}food=${query.replace(" ", "_")}`),
     ]);
-    const data = [...data1, ...data2, ...data3, ...data4, ...data5];
+    const data = [...beer, ...malt, ...yeast, ...brewed, ...hops, ...food];
 
     // const data = await getJSON(
     //   `${API_URL}page=1&per_page=10&beer_name=${query.replace(" ", "_")}`
