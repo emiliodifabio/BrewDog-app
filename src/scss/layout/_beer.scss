@@ -5,12 +5,14 @@
   @include mixins.beer-grid;
   .message-shadow {
     filter: drop-shadow(0 0 20px rgba(variables.$primary-color, 0.3));
+  
+
     .message {
       @include mixins.beer-message;
       z-index: 0;
 
       .message--start {
-        width: 70%;
+        width: 61%;
 
         ul {
           font-size: 1.5rem;
@@ -22,7 +24,7 @@
       }
 
       .message--fun {
-        margin-top: 180px;
+        margin-top: 0px;
         padding: 0 60px;
       }
     }
@@ -344,6 +346,16 @@
 
 @media (max-width: 960px) {
   .beer {
+    .message-shadow {
+      .message {
+        .message--start {
+          width: 50%;
+        }
+        .message--fun {
+          width: 70%;
+        }
+      }
+    }
     .beer-info {
       @include mixins.beer-info-960;
       .beer-info-flex {
@@ -387,6 +399,13 @@
 
 @media (max-width: 768px) {
   .beer {
+    .message-shadow {
+      .message {
+        .message--fun {
+          width: 70%;
+        }
+      }
+    }
     .beer-info {
       text-align: center;
 
@@ -402,7 +421,10 @@
     .message-shadow {
       .message {
         .message--start {
-          width: 65%;
+          width: 40%;
+        }
+        .message--fun {
+          width: 60%;
         }
       }
     }

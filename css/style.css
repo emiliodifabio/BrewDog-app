@@ -394,11 +394,11 @@ form .search__btn::after {
   text-align: center;
   min-height: 900px;
   background: linear-gradient(135deg, #f29f05, #bf4904);
-  clip-path: polygon(85% 100%, 70% 75%, 95% 25%, 80% 0%, 20% 0%, 5% 25%, 30% 75%, 15% 100%);
+  clip-path: polygon(10% 0%, 28% 75%, 20% 100%, 80% 100%, 72% 75%, 90% 0%);
   z-index: 0;
 }
 .beer .message-shadow .message .message--start {
-  width: 70%;
+  width: 61%;
 }
 .beer .message-shadow .message .message--start ul {
   font-size: 1.5rem;
@@ -408,7 +408,7 @@ form .search__btn::after {
   margin-top: 30px;
 }
 .beer .message-shadow .message .message--fun {
-  margin-top: 180px;
+  margin-top: 0px;
   padding: 0 60px;
 }
 .beer .beer-info .beer-info__name {
@@ -805,6 +805,12 @@ form .search__btn::after {
   }
 }
 @media (max-width: 960px) {
+  .beer .message-shadow .message .message--start {
+    width: 50%;
+  }
+  .beer .message-shadow .message .message--fun {
+    width: 70%;
+  }
   .beer .beer-info {
     text-align: center;
   }
@@ -841,6 +847,9 @@ form .search__btn::after {
   }
 }
 @media (max-width: 768px) {
+  .beer .message-shadow .message .message--fun {
+    width: 70%;
+  }
   .beer .beer-info {
     text-align: center;
   }
@@ -850,7 +859,10 @@ form .search__btn::after {
 }
 @media (max-width: 500px) {
   .beer .message-shadow .message .message--start {
-    width: 65%;
+    width: 40%;
+  }
+  .beer .message-shadow .message .message--fun {
+    width: 60%;
   }
   .beer .beer-info .beer-info__name {
     padding: 3px 20px;

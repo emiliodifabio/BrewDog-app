@@ -91,7 +91,6 @@
   height: auto;
   margin: 20px auto;
   // place-content: center;
-  
 }
 
 @mixin beer-message {
@@ -104,34 +103,33 @@
   text-align: center;
 
   min-height: 900px;
-    background: linear-gradient(
-      135deg,
-      variables.$primary-color,
-      variables.$tertiary-color
-    );
-    clip-path: polygon(
-      85% 100%,
-      70% 75%,
-      95% 25%,
-      80% 0%,
-      20% 0%,
-      5% 25%,
-      30% 75%,
-      15% 100%
-    );
+  background: linear-gradient(
+    135deg,
+    variables.$primary-color,
+    variables.$tertiary-color
+  );
+
+  clip-path: polygon(
+    10% 0%, 
+    28% 75%, 
+    20% 100%, 
+    80% 100%, 
+    72% 75%, 
+    90% 0%);
+
+
+
+  // clip-path: polygon(
+  //   85% 100%,
+  //   70% 75%,
+  //   95% 25%,
+  //   80% 0%,
+  //   20% 0%,
+  //   5% 25%,
+  //   30% 75%,
+  //   15% 100%
+  // );
 }
-
-// @mixin beer-message-768 {
-//   left: 0;
-// }
-
-// @mixin beer-message-500 {
-
-// }
-
-// @mixin beer-message-400 {
-// // padding: 0 15px;
-// }
 
 @mixin spinner {
   .spinner {
