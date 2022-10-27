@@ -13,8 +13,8 @@
 }
 
 // EFFECTS
-@mixin box-shadow {
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+@mixin box-shadow-header {
+  box-shadow: 0 0 20px 0 rgba(variables.$tertiary-color, 0.5);
 }
 
 @mixin bubbles {
@@ -105,9 +105,12 @@
   min-height: 900px;
   background: linear-gradient(
     135deg,
-    variables.$primary-color,
-    variables.$tertiary-color
+    variables.$primary-color 10%,
+    variables.$tertiary-color 70%
   );
+
+  // background-image: url('/src/img/foam-beer.svg');
+  // background-repeat: no-repeat;
 
   clip-path: polygon(
     10% 0%, 

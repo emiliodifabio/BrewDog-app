@@ -5,7 +5,6 @@
   @include mixins.beer-grid;
   .message-shadow {
     filter: drop-shadow(0 0 20px rgba(variables.$primary-color, 0.3));
-  
 
     .message {
       @include mixins.beer-message;
@@ -24,6 +23,7 @@
       }
 
       .message--fun {
+        place-self: start center;
         margin-top: 0px;
         padding: 0 60px;
       }
@@ -353,6 +353,7 @@
         }
         .message--fun {
           width: 70%;
+          padding: 0 70px;
         }
       }
     }
@@ -428,7 +429,7 @@
         }
       }
     }
-    
+
     .beer-info {
       .beer-info__name {
         padding: 3px 20px;
@@ -443,6 +444,19 @@
       .cards__ingredients {
         .cards__ingredients--malt-title {
           @include mixins.cards-ingredients-malt-title-500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .beer {
+    .message-shadow {
+      .message {
+        .message--fun {
+          width: 45%;
+          padding: 0 0;
         }
       }
     }

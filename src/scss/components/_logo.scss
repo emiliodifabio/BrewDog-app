@@ -6,6 +6,6 @@
     width: 50px;
     height: auto;
     border-radius: 50px;
-    @include mixins.box-shadow;
+    @include mixins.box-shadow-header;
   }
 }

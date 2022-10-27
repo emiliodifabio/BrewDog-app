@@ -2,30 +2,42 @@
 @use "../abstract/mixins";
 
 .footer {
-  display: flex;
+  display: grid;
   position: relative;
   width: 100%;
   height: auto;
   color: variables.$light-color;
   background-color: variables.$footer-bg-color;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  place-items: center;
   padding: 20px 10px;
   border-radius: variables.$border-radius-footer;
   box-shadow: variables.$box-shadow;
+  // font-size: clamp(1rem, 2.5vw, 2rem);
+  p {
+    position: relative;
+    width: 100%;
+    height: auto;
+    place-content: center;
+    font-size: clamp(variables.$p-size, 3.3vw, variables.$h4-size);
 
-  a {
-    color: variables.$light-color;
-    font-weight: variables.$font-weigth-medium;
-    margin: 0 4px;
+    a {
+      color: variables.$light-color;
+      font-weight: variables.$font-weigth-medium;
+      margin: 0 4px;
+    }
+
+    a:hover {
+      color: variables.$primary-color;
+      transition: all 0.3s;
+    }
   }
+}
 
-  a:hover {
-    color: variables.$primary-color;
-    transition: all 0.3s;
-  }
-
-  .logo_github {
-    margin-left: 20px;
+@media (max-width: 300px) {
+  footer {
+    .logo_github {
+      padding: 20px 0;
+    }
   }
 }

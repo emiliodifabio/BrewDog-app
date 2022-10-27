@@ -163,23 +163,23 @@ button::before {
 }
 form {
   position: relative;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 0 rgba(191, 73, 4, 0.5);
 }
 form .search__btn {
   display: block;
   position: relative;
-  width: 50px !important;
+  width: 100px !important;
   height: 50px !important;
   border: none;
   border-radius: 50px;
   background-color: #bf4904;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 0 rgba(191, 73, 4, 0.5);
   z-index: 10;
 }
 form .search__btn .search__icon {
-  position: absolute;
-  top: 13px;
-  left: 15px;
+  position: relative;
+  top: 0px;
+  left: 0px;
   width: 25px;
   height: 25px;
   fill: #fff;
@@ -196,17 +196,6 @@ form::after {
   left: 0;
   position: absolute;
   animation: bubbles 5s linear infinite both;
-}
-
-form .search__btn::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  border: 3px inset #bf4904;
-  border-radius: 50px;
 }
 
 .pagination {
@@ -268,7 +257,7 @@ form .search__btn::after {
   width: 50px;
   height: auto;
   border-radius: 50px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 0 rgba(191, 73, 4, 0.5);
 }
 
 ::-webkit-scrollbar {
@@ -323,11 +312,11 @@ form .search__btn::after {
 .header .search::before {
   content: "";
   position: absolute;
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  border: 3px inset #bf4904;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border: 2px inset #bf4904;
   border-radius: 50px;
   z-index: -1;
 }
@@ -393,7 +382,7 @@ form .search__btn::after {
   place-items: center;
   text-align: center;
   min-height: 900px;
-  background: linear-gradient(135deg, #f29f05, #bf4904);
+  background: linear-gradient(135deg, #f29f05 10%, #bf4904 70%);
   clip-path: polygon(10% 0%, 28% 75%, 20% 100%, 80% 100%, 72% 75%, 90% 0%);
   z-index: 0;
 }
@@ -408,6 +397,7 @@ form .search__btn::after {
   margin-top: 30px;
 }
 .beer .message-shadow .message .message--fun {
+  place-self: start center;
   margin-top: 0px;
   padding: 0 60px;
 }
@@ -810,6 +800,7 @@ form .search__btn::after {
   }
   .beer .message-shadow .message .message--fun {
     width: 70%;
+    padding: 0 70px;
   }
   .beer .beer-info {
     text-align: center;
@@ -875,6 +866,12 @@ form .search__btn::after {
     margin-top: 20px;
   }
 }
+@media (max-width: 400px) {
+  .beer .message-shadow .message .message--fun {
+    width: 45%;
+    padding: 0 0;
+  }
+}
 body {
   background-color: #2c2a2b;
 }
@@ -909,31 +906,40 @@ body {
   }
 }
 .footer {
-  display: flex;
+  display: grid;
   position: relative;
   width: 100%;
   height: auto;
   color: #fff;
   background-color: #bf4904;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  place-items: center;
   padding: 20px 10px;
   border-radius: 50px 50px 0 0;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
-.footer a {
+.footer p {
+  position: relative;
+  width: 100%;
+  height: auto;
+  place-content: center;
+  font-size: clamp(0.8125em, 3.3vw, 1.25em);
+}
+.footer p a {
   color: #fff;
   font-weight: 600;
   margin: 0 4px;
 }
-.footer a:hover {
+.footer p a:hover {
   color: #f29f05;
   transition: all 0.3s;
 }
-.footer .logo_github {
-  margin-left: 20px;
-}
 
+@media (max-width: 300px) {
+  footer .logo_github {
+    padding: 20px 0;
+  }
+}
 .header {
   display: flex;
   position: relative;

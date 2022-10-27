@@ -13,25 +13,26 @@ button::before {
 
 form {
   position: relative;
-  @include mixins.box-shadow;
+  @include mixins.box-shadow-header;
 
   .search__btn {
     display: block;
     position: relative;
-    width: 50px !important;
+    width: 100px !important;
     height: 50px !important;
-    border: variables.$reset-border;
+    // border: variables.$reset-border;
+    border: none;
     border-radius: variables.$border-radius;
     background-color: variables.$btn-search-color;
-    @include mixins.box-shadow;
+    @include mixins.box-shadow-header;
     z-index: 10;
 
     .search__icon {
-      position: absolute;
-      top: 13px;
-      left: 15px;
-      width: 25px;
-      height: 25px;
+      position: relative;
+      top: 0px; // 13
+      left: 0px; // 15
+      width: 25px; // 25
+      height: 25px; // 25
       fill: variables.$icon-color;
     }
   }
@@ -41,18 +42,18 @@ form::after {
   @include mixins.bubbles;
 }
 
-form {
-  .search__btn::after {
-    content: "";
-    position: absolute;
-    top: -3px; // outline-width: 3px;
-    right: -3px; // outline-width: 3px;
-    bottom: -3px; // outline-width: 3px;
-    left: -3px; // outline-width: 3px;
-    border: 3px inset variables.$tertiary-color;
-    border-radius: 50px;
-  }
-}
+// form {
+//   .search__btn::after {
+//     content: "";
+//     position: absolute;
+//     top: -3px; // outline-width: 3px;
+//     right: -3px; // outline-width: 3px;
+//     bottom: -3px; // outline-width: 3px;
+//     left: -3px; // outline-width: 3px;
+//     border: 3px inset variables.$tertiary-color;
+//     border-radius: 50px;
+//   }
+// }
 
 .pagination {
   display: flex;
