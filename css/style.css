@@ -388,13 +388,14 @@ form::after {
 }
 .beer .message-shadow .message .message--start {
   width: 61%;
+  padding: 0 10px;
 }
 .beer .message-shadow .message .message--start ul {
   font-size: 1.5rem;
   margin: 10px auto;
 }
 .beer .message-shadow .message .message--start ul li {
-  margin-top: 30px;
+  margin-top: 35px;
 }
 .beer .message-shadow .message .message--fun {
   place-self: start center;
@@ -849,9 +850,6 @@ form::after {
   }
 }
 @media (max-width: 500px) {
-  .beer .message-shadow .message .message--start {
-    width: 40%;
-  }
   .beer .message-shadow .message .message--fun {
     width: 60%;
   }
@@ -867,6 +865,9 @@ form::after {
   }
 }
 @media (max-width: 400px) {
+  .beer .message-shadow .message .message--start {
+    width: 50%;
+  }
   .beer .message-shadow .message .message--fun {
     width: 45%;
     padding: 0 0;
