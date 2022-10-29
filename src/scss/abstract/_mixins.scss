@@ -90,7 +90,6 @@
   width: 95%;
   height: auto;
   margin: 20px auto;
-  // place-content: center;
 }
 
 @mixin beer-message {
@@ -100,17 +99,13 @@
   margin-inline: auto;
   color: variables.$light-color;
   place-items: center;
-  text-align: center;
-
-  min-height: 900px;
+  text-align: center; 
+  min-height: 950px;
   background: linear-gradient(
     135deg,
     variables.$primary-color 10%,
     variables.$tertiary-color 70%
   );
-
-  // background-image: url('/src/img/foam-beer.svg');
-  // background-repeat: no-repeat;
 
   clip-path: polygon(
     10% 0%, 
@@ -119,19 +114,6 @@
     80% 100%, 
     72% 75%, 
     90% 0%);
-
-
-
-  // clip-path: polygon(
-  //   85% 100%,
-  //   70% 75%,
-  //   95% 25%,
-  //   80% 0%,
-  //   20% 0%,
-  //   5% 25%,
-  //   30% 75%,
-  //   15% 100%
-  // );
 }
 
 @mixin spinner {

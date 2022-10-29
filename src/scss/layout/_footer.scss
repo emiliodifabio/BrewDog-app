@@ -3,17 +3,18 @@
 
 .footer {
   display: grid;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: auto;
   color: variables.$light-color;
   background-color: variables.$footer-bg-color;
   text-align: center;
   place-items: center;
+  place-self: end center;
   padding: 20px 10px;
   border-radius: variables.$border-radius-footer;
   box-shadow: variables.$box-shadow;
-  // font-size: clamp(1rem, 2.5vw, 2rem);
+
   p {
     position: relative;
     width: 100%;

@@ -6,7 +6,7 @@
   display: grid;
   position: relative;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   grid-template-columns: 300px minmax(min-content, 100%);
 
   .search-results {
@@ -23,8 +23,8 @@
 
 @media (max-width: 768px) {
   .container {
-    // width: 100%;
-    // height: auto;
+    width: 100%;
+    height: auto;
     grid-template-columns: 100%;
     grid-template-areas:
       "results"

@@ -9,6 +9,7 @@
     height: auto;
     justify-content: space-between;
     text-align: center;
+    margin: 0 15px;
     background-color: variables.$secondary-color;
     border-radius: 50px;
     
@@ -19,7 +20,9 @@
     
     input::placeholder {
       color: variables.$light-color;
-      opacity: 80%;
+      opacity: 60%;
+      font-family: variables.$ff;
+      font-weight: variables.$font-weigth-small;
     }
   }
   
