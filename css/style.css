@@ -386,7 +386,6 @@ form::after {
   text-align: center;
   min-height: 950px;
   background: linear-gradient(135deg, #f29f05 10%, #bf4904 70%);
-  clip-path: polygon(10% 0%, 28% 75%, 20% 100%, 80% 100%, 72% 75%, 90% 0%);
   z-index: 0;
 }
 .beer .message-shadow .message .message--start {
