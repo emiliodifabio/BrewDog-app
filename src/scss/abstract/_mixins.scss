@@ -106,14 +106,6 @@
     variables.$primary-color 10%,
     variables.$tertiary-color 70%
   );
-
-  // clip-path: polygon(
-  //   10% 0%, 
-  //   28% 75%, 
-  //   20% 100%, 
-  //   80% 100%, 
-  //   72% 75%, 
-  //   90% 0%);
 }
 
 @mixin spinner {

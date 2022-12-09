@@ -403,8 +403,11 @@
   .beer {
     .message-shadow {
       .message {
+        .message--start {
+          width: 90%;
+        }
         .message--fun {
-          width: 70%;
+          width: 90%;
         }
       }
     }
@@ -420,14 +423,6 @@
 
 @media (max-width: 500px) {
   .beer {
-    .message-shadow {
-      .message {
-        .message--fun {
-          width: 60%;
-        }
-      }
-    }
-
     .beer-info {
       .beer-info__name {
         padding: 3px 20px;
@@ -452,11 +447,8 @@
   .beer {
     .message-shadow {
       .message {
-        .message--start {
-          width: 50%;
-        }
         .message--fun {
-          width: 45%;
+          width: 65%;
           padding: 0 0;
         }
       }

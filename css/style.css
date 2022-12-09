@@ -841,8 +841,11 @@ form::after {
   }
 }
 @media (max-width: 768px) {
+  .beer .message-shadow .message .message--start {
+    width: 90%;
+  }
   .beer .message-shadow .message .message--fun {
-    width: 70%;
+    width: 90%;
   }
   .beer .beer-info {
     text-align: center;
@@ -852,9 +855,6 @@ form::after {
   }
 }
 @media (max-width: 500px) {
-  .beer .message-shadow .message .message--fun {
-    width: 60%;
-  }
   .beer .beer-info .beer-info__name {
     padding: 3px 20px;
   }
@@ -867,11 +867,8 @@ form::after {
   }
 }
 @media (max-width: 400px) {
-  .beer .message-shadow .message .message--start {
-    width: 50%;
-  }
   .beer .message-shadow .message .message--fun {
-    width: 45%;
+    width: 65%;
     padding: 0 0;
   }
 }
