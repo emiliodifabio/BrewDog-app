@@ -6,7 +6,6 @@
   display: grid;
   position: relative;
   width: 100%;
-  min-height: 100vh;
   grid-template-columns: 300px minmax(min-content, 100%);
 
   .search-results {

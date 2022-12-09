@@ -384,7 +384,7 @@ form::after {
   color: #fff;
   place-items: center;
   text-align: center;
-  min-height: 950px;
+  min-height: 700px;
   background: linear-gradient(135deg, #f29f05 10%, #bf4904 70%);
   z-index: 0;
 }
@@ -880,7 +880,6 @@ body {
   display: grid;
   position: relative;
   width: 100%;
-  min-height: 100vh;
   grid-template-columns: 300px minmax(min-content, 100%);
 }
 .container .search-results {
