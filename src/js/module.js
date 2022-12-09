@@ -15,7 +15,6 @@ export const state = {
 export const loadRecipe = async function (id) {
   try {
     const data = await getJSON(`${API_URL}ids=${id}`);
-    console.log(data);
 
     const { 0: recipe } = data;
 
@@ -83,10 +82,6 @@ export const loadSearchResults = async function (query) {
     ]);
     const data = [...beer, ...malt, ...yeast, ...brewed, ...hops, ...food];
 
-    // const data = await getJSON(
-    //   `${API_URL}page=1&per_page=10&beer_name=${query.replace(" ", "_")}`
-    // );
-    console.log(data);
     state.search.results = data.map((recipe) => {
       return {
         id: recipe.id,
